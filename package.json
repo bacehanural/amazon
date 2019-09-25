@@ -1,0 +1,32 @@
+{
+  "name": "bekoautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.2.0",
+    "path": "^0.12.7",
+    "test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js",
+    "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
+    "consolidate:vrt": "CONSOLIDATE=1 npm run test:vrt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^76.0.1",
+    "nightwatch": "^1.2.2"
+  },
+  "dependencies": {
+    "cucumber": "^5.1.0",
+    "cucumber-pretty": "^1.5.2",
+    "dotenv": "^7.0.0",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.2.0",
+    "nightwatch-api": "^2.3.0",
+    "nightwatch-vrt": "^0.2.10",
+    "path": "^0.12.7"
+  }
+}
