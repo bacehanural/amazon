@@ -10,8 +10,8 @@ module.exports = {
                 .checkInitialElements()
                 .openAboutBekoMenu()
                 .clickAboutBekoSponsorships()
-                .waitForElementVisible('@aboutUsBanner', 10000)
-                .assert.elementPresent('@aboutUsBanner')
+                .waitForElementVisible('@sponsorshipBanner', 1000)
+                .assert.elementPresent('@sponsorshipBanner')
                 .bekoHomePage()
                 .assert.elementPresent('@heroBanner');
                

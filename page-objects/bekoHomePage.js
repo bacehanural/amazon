@@ -128,6 +128,7 @@ module.exports = {
         aboutBekoFirstElement: '.subnav-inner.subnav-1 > div > div > div a:first-child',
         aboutBekoSecondElement: '.subnav-inner.subnav-1 > div > div > div a:nth-child(2)',
         aboutUsBanner: '.Hero__slide--banner.Hero__slide--medium',
+        sponsorshipBanner: '.root.responsivegrid > div > div:nth-child(2) > div > div:nth-child(3)',
         sponsorshipsPageContent: '.root.responsivegrid > div > div:nth-child(2) > div',
 
     },

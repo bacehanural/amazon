@@ -10,6 +10,7 @@ module.exports = {
         .maximizeWindow()
         .closeCookies()
             .openBlogPage()
+            .pause(2000)
             .checkBlogElements()
             .clickReadPostButton()
             .waitForElementVisible('@readPostBanner', 1000)
