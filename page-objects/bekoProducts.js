@@ -31,6 +31,15 @@ module.exports = {
         seeMatchingProductsButton: '.JS-submit-filter-button',
         matchingProductsResult: '#static-filters .ProductFilters__buttons',
         closeFilterButton: '.filterWrapper > form > button',
+        plpFirstProductCompare: '#productCardContainer > div:first-child > div .ProductPLPheader__root > button:nth-child(2)',
+        plpSecondProductCompare: '#productCardContainer > div:nth-child(2) > div .ProductPLPheader__root > button:nth-child(2)',
+        plpThirdProductCompare: '#productCardContainer > div:nth-child(3) > div .ProductPLPheader__root > button:nth-child(2)',
+        plpFourthProductCompare: '#productCardContainer > div:nth-child(4) > div .ProductPLPheader__root > button:nth-child(2)',
+        compareHeader: '#header #compareHeader',
+        comparePage: '.CompareCardsSlider__center',
+        comparePageRemoveButton: '.CompareCardsSlider__center > div > div > div:first-child > a',
+        pdpCompareButton: '.ProductInfo__header > div:nth-child(2) button:nth-child(2)',
+        backToPLP: '.Breadcrumbs__root > div > span > div:nth-child(5) > a',
 
         //Products Items-first product grid
         productsGridFirst: '#subnav-products-grid-category-0 .SubNavProductsGrid__top',
@@ -168,6 +177,38 @@ module.exports = {
 
         seeMatchingProductsButton: function() {
             return this.waitForElementVisible('@seeMatchingProductsButton', 1000).click('@seeMatchingProductsButton');
+        },
+
+        clickPlpFirstCompare: function() {
+            return this.waitForElementVisible('@plpFirstProductCompare', 1000).click('@plpFirstProductCompare');
+        },
+
+        clickPlpSecondCompare: function() {
+            return this.waitForElementVisible('@plpSecondProductCompare', 1000).click('@plpSecondProductCompare');
+        },
+
+        clickPlpThirdCompare: function() {
+            return this.waitForElementVisible('@plpThirdProductCompare', 1000).click('@plpThirdProductCompare');
+        },
+
+        clickPlpFourthCompare: function() {
+            return this.waitForElementVisible('@plpFourthProductCompare', 1000).click('@plpFourthProductCompare');
+        },
+
+        clickPdpCompare: function() {
+            return this.waitForElementVisible('@pdpCompareButton', 1000).click('@pdpCompareButton');
+        },
+
+        backToPLP: function() {
+            return this.waitForElementVisible('@backToPLP', 1000).click('@backToPLP');
+        },
+
+        clickPlpHeaderCompare: function() {
+            return this.waitForElementVisible('@compareHeader', 1000).click('@compareHeader');
+        },
+
+        clickRemoveButton: function() {
+            return this.waitForElementVisible('@comparePageRemoveButton', 1000).click('@comparePageRemoveButton');
         },
 
         //Return Home Page
