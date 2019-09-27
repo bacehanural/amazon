@@ -21,7 +21,11 @@ module.exports = {
               'desiredCapabilities': {
                   'browserName': 'chrome',
                   'chromeOptions': {
-                     'args': ['--headless']
+                     'args': [
+                         '--headless',
+                         'incognito',
+                         'window-size=1366,768',
+                        ]
                   }
               }
           }
