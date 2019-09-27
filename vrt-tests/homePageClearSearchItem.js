@@ -11,12 +11,11 @@ module.exports = {
                 .checkInitialElements()
                 .clickSearch()
                 .searchHomePage(mainQuery)
-                .waitForElementVisible('@searchKeyword', 10000)
+                .pause(10000)
                 .assert.elementPresent('@searchKeyword')
                 .clickSearchedKeyword()
                 .assert.elementPresent('@searchResult')
-                .clickXButtonSearch()
-                .waitForElementVisible(searchField);
+                .clickXButtonSearch();
                
             client.assert.screenshotIdenticalToBaseline(searchField, 'searchField');
         }
