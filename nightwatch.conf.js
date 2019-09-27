@@ -22,9 +22,9 @@ module.exports = {
                   'browserName': 'chrome',
                   'chromeOptions': {
                      'args': [
-                         '--headless',
-                         'incognito',
-                         'window-size=1366,768',
+                        //'--headless',
+                         //'incognito',
+                         //'window-size=1366,768',
                         ]
                   }
               }
