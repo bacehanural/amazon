@@ -11,7 +11,8 @@ module.exports = {
            .checkInitialElements()
            .assert.elementPresent('@products')
            .openProductsMenu() 
-           .waitForElementVisible('@productGridFirstItemFirst', 1000)
+           client.moveToElement('#subnav-products-grid-category-0 .SubNavProductsGrid__top .SubNavProductsGrid__title', 0, 0);
+           page
            .openKitchenItem()
            .clickKitchenProductItem()
            client.moveToElement('#js-plp-loader-wrapper > div:nth-child(2) > div > section > div > div:first-child > div  .ProductCardPLP__productSpecsWrapper', 0, 0);

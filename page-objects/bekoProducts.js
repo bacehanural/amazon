@@ -12,13 +12,13 @@ module.exports = {
         
         //PLP&PDP
         selectedProductsMenu: '.JS-toggle.JS-subnav-category.SubNavProductsMenu__root.open > aside',
-        selectedKitchenProduct: '#subnav > div:first-child > div > div:nth-child(2) > div > div:first-child > div > div:first-child > a:nth-child(2)',
+        selectedKitchenProduct: '.SubNavProductsMenu__root.open > div > div:first-child .SubNavProductsMenu__line:first-child  a:nth-child(2)',
         selectedLaundryProduct: '#subnav > div:first-child > div > div:nth-child(3) > div > div:first-child > div > div > a:nth-child(2)',
         selectedBuiltInProduct: '#subnav > div:first-child > div > div:nth-child(4) > div > div:first-child > div > div > a:nth-child(2)',
         selectedAirHomeCareProduct: '#subnav > div:first-child > div > div:nth-child(5) > div > div:first-child > div > div > a:nth-child(2)',
         productPageTitle: '.Breadcrumbs__root > div',
         productCard: '#js-plp-loader-wrapper > div:nth-child(2) > div > section > div > div:first-child > div',
-        pdpMainPage: '.pageContent > div:first-child > section #product-info-top > div:first-child > div:first-child',
+        pdpMainPageDirectory: '.Breadcrumbs__root > div > span',
         productEnergyClassWrapper: '#js-plp-loader-wrapper > div:nth-child(2) > div > section > div > div:first-child > div  .ProductCardPLP__productSpecsWrapper',
         plpWhereToBuyButton: '#js-plp-loader-wrapper > div:nth-child(2) > div > section > div > div:first-child #button-buy-not-sticky',
         pdpWhereToBuyButton: '.ProductInfoParams__root .ProductInfoParams__center .container  button',

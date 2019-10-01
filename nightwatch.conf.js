@@ -24,7 +24,7 @@ module.exports = {
                      'args': [
                         '--headless',
                          'incognito',
-                         'window-size=1366,768',
+                         'window-size=1600,1200',
                         ]
                   }
               }

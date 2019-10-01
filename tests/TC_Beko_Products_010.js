@@ -11,7 +11,8 @@ module.exports = {
            .checkInitialElements()
            .assert.elementPresent('@products')
            .openProductsMenu() 
-           .waitForElementVisible('@productsGridFirstTitle', 1000)
+           client.moveToElement('#subnav-products-grid-category-0 .SubNavProductsGrid__top .SubNavProductsGrid__title', 0, 0);
+           page
            .openKitchenSeeAll()
            .assert.elementPresent('@selectedProductsMenu');
    
