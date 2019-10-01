@@ -17,11 +17,11 @@ module.exports = {
         selectedBuiltInProduct: '#subnav > div:first-child > div > div:nth-child(4) > div > div:first-child > div > div > a:nth-child(2)',
         selectedAirHomeCareProduct: '#subnav > div:first-child > div > div:nth-child(5) > div > div:first-child > div > div > a:nth-child(2)',
         productPageTitle: '.Breadcrumbs__root > div',
-        productCard: '#js-plp-loader-wrapper > div:nth-child(2) > div > section > div > div:first-child > div',
+        productCard: '#js-plp-loader-wrapper > div:nth-child(2) > div > section > div > div:first-child > div > div:nth-child(2) > a',
         pdpMainPageDirectory: '.Breadcrumbs__root > div > span',
         productEnergyClassWrapper: '#js-plp-loader-wrapper > div:nth-child(2) > div > section > div > div:first-child > div  .ProductCardPLP__productSpecsWrapper',
         plpWhereToBuyButton: '#js-plp-loader-wrapper > div:nth-child(2) > div > section > div > div:first-child #button-buy-not-sticky',
-        pdpWhereToBuyButton: '.ProductInfoParams__root .ProductInfoParams__center .container  button',
+        pdpWhereToBuyButton: '.ProductInfoParams__root #button-buy-not-sticky',
         findAStoreNearMe: '#modal-where-to-buy-overlay > div > div:nth-child(2) > div > div > div:nth-child(6) > a',
         findAStoreNearMeMap: '#modal-where-to-buy-near-me > div:first-child > div > div > div > div',
         filterButton: '#static-filters button',
@@ -38,7 +38,7 @@ module.exports = {
         compareHeader: '#header #compareHeader',
         comparePage: '.CompareCardsSlider__center',
         comparePageRemoveButton: '.CompareCardsSlider__center > div > div > div:first-child > a',
-        pdpCompareButton: '.ProductInfo__header > div:nth-child(2) button:nth-child(2)',
+        pdpCompareButton: '#product-info-top button.white.IconBtn__root.JS-compare-add.JS-send-gtm.aos-init.aos-animate',
         backToPLP: '.Breadcrumbs__root > div > span > div:nth-child(5) > a',
 
         //Products Items-first product grid
@@ -152,7 +152,7 @@ module.exports = {
         },
 
         pdpWhereToBuyButton: function() {
-            return this.waitForElementVisible('@pdpWhereToBuyButton', 1000).click('@pdpWhereToBuyButton');
+            return this.waitForElementVisible('@pdpWhereToBuyButton', 10000).click('@pdpWhereToBuyButton');
         },
 
         findAStoreNearMeButton: function() {

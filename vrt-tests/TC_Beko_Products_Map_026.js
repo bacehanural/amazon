@@ -17,9 +17,9 @@ module.exports = {
            .clickKitchenProductItem()
            .waitForElementVisible('@productPageTitle', 1000)
            .clickProductCard()
-           client.moveToElement('.ProductInfoParams__root .ProductInfoParams__center .container  button', 0, 0);
+           .pause(10000)
+           client.moveToElement('.ProductInfoParams__root #button-buy-not-sticky', 0, 0);
            page
-           .pause(1000)
            .pdpWhereToBuyButton()
            .pause(1000)
            .findAStoreNearMeButton()
