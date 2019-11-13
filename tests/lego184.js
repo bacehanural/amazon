@@ -12,9 +12,10 @@ module.exports = {
                 .checkInitialElements()
                 .assert.elementPresent('@themesMainTitle')
                 .assert.elementPresent('@newSetsFirstCard')
+                .clickNextNewSets()
                 .clickPrevNewSets()
                 .pause(3000)
-                .assert.elementNotPresent('@newSetsFirstCard')
+                .assert.elementPresent('@facetWrapper')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego184.png')

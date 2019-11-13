@@ -13,7 +13,8 @@ module.exports = {
                 .assert.elementPresent('@exploreThirdBannerTitle')
                 .assert.elementPresent('@exploreThirdBannerDescription')
                 .clickThirdBannerExplore()
-                .assert.urlContains('https://www.beko.com/es-es/Soporte')
+                .pause(3000)
+                .assert.elementPresent('@facetWrapper')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego181.png')

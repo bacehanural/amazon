@@ -13,7 +13,8 @@ module.exports = {
                 .assert.elementPresent('@exploreFirstBannerTitle')
                 .assert.elementPresent('@exploreFirstBannerDescription')
                 .clickFirstBannerExplore()
-                .assert.urlContains('https://www.lego.com/en-us/search?q=Building%20Instructions')
+                .pause(3000)
+                .assert.elementPresent('@facetWrapper')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego179.png')

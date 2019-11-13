@@ -12,9 +12,10 @@ module.exports = {
                 .checkInitialElements()
                 .assert.elementPresent('@themesMainTitle')
                 .assert.elementPresent('@themesFirstItem')
+                .clickNextThemes()
                 .clickPrevThemes()
                 .pause(3000)
-                .assert.elementNotPresent('@themesFirstItem')
+                .assert.elementPresent('@themesFirstItem')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego177.png')

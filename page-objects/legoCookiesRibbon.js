@@ -14,7 +14,19 @@ module.exports = {
         typeEmail: 'input[type = "email"]',
         typePassword: 'input[type = "password"]',
         signInButton: '.btn-block.btn-primary',
-        signInButtonMainPage: '.SiteTopHeaderRight .myAccount-Component button',
+        signInButtonMainPage: '.SiteTopHeaderRight .myAccount-Component .collapseButton', //accountComponent
+
+        //Register (fonksiyonları yazılmadı, story henüz develpment'a alınmamış)
+        title: '.container .cx-section div:first-child [formcontrolname="titleCode"]', //option seçilecek drop-down list box'tan
+        firstName: 'input[name = "firstname"]',
+        lastName: 'input[name = "lastname"]',
+        emailRegister: 'input[type = "email"]',
+        passwordRegister: '.container .cx-section div:nth-child(5) input[type = "password"]',
+        confirmPassword: '.container .cx-section div:nth-child(6) input[type = "password"]',
+        newsletterCheckbox: 'input[formcontrolname="newsletter"]',
+        termsConditionsCheckbox: 'input[formcontrolname="termsandconditions"]',
+        registerButton: 'button[type="submit"]',
+
 
     },
     commands: [{

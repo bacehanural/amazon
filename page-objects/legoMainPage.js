@@ -11,7 +11,7 @@ module.exports = {
         carouselNext : '.Section1 .next',
         carouselPrev : '.Section1 .previous',
         carouselDots : '.Section1 .indicators > button:first-child',
-        acceptCookiesButton: '.TopHeaderSlot .btn-accept',
+        acceptCookiesButton: '.btn-accept',
 
         //Series Carousel Component
         productCarousel : '.Section3 .carousel',
@@ -29,36 +29,37 @@ module.exports = {
         fourthCardShopNow: '.Section3 .carousel-inner > div:first-child > div:nth-child(4) .carousel-caption > a',
 
         //Themes Component (didnt edit)
-        themesComponent: '.example',
-        themesMainTitle: '.example',
+        themesComponent: '.theme-carousel-wrapper:first-child',
+        themesMainTitle: '.theme-carousel-wrapper:first-child .title',
         themesSeeMoreButton: '.example',
-        themesNext: '.example',
-        themesPrev: '.example',
-        themesFirstItem: '.example',
-        themesSecondItem: '.example',
-        themesThirdItem: '.example',
-        themesFouthItem: '.example',
-        themesFifthItem: '.example',
-        themesSixthItem: '.example',
+        themesNext: '.theme-carousel-wrapper:first-child .carousel-control-next',
+        themesPrev: '.theme-carousel-wrapper:first-child .carousel-control-prev',
+        themesFirstItem: '.theme-carousel-wrapper:first-child .item-wrapper:first-child a',
+        themesSecondItem: '.theme-carousel-wrapper:first-child .item-wrapper:nth-child(2) a',
+        themesThirdItem: '.theme-carousel-wrapper:first-child .item-wrapper:nth-child(3) a',
+        themesFouthItem: '.theme-carousel-wrapper:first-child .item-wrapper:nth-child(4) a',
+        themesFifthItem: '.theme-carousel-wrapper:first-child .item-wrapper:nth-child(5) a',
+        themesSixthItem: '.theme-carousel-wrapper:first-child .item-wrapper:nth-child(6) a',
+        facetWrapper: '.ProductListPageTemplate .facetWrapper',
 
         //Explore Component
-        exploreComponent: '.Section2C .flex-column',
-        exploreMainTitle: '.Section2C .flex-column .title',
-        exploreFirstBannerInstructions: '.Section2C .flex-column > div > div:first-child', //not clickable, after bug fix update the path
-        exploreFirstBannerTitle: '.Section2C .flex-column > div > div:first-child .carousel-inner > div > div > div > h3',
-        exploreFirstBannerDescription: '.Section2C .flex-column > div > div:first-child .carousel-inner > div > div > div > p',
-        exploreSecondBannerHelp: '.Section2C .flex-column > div > div:nth-child(2) > div > div:first-child', ////not clickable, after bug fix update the path
-        exploreSecondBannerTitle: '.Section2C .flex-column > div > div:nth-child(2) > div > div:first-child .carousel-item > div > div > h3',
-        exploreSecondBannerDescription: '.Section2C .flex-column > div > div:nth-child(2) > div > div:first-child .carousel-item > div > div > p',
-        exploreThirdBannerApp: '.Section2C .flex-column > div > div:nth-child(2) > div > div:nth-child(2)', //not clickable, after bug fix update the path
-        exploreThirdBannerTitle: '.Section2C .flex-column > div > div:nth-child(2) > div > div:nth-child(2) .carousel-item > div > div > h3',
-        exploreThirdBannerDescription: '.Section2C .flex-column > div > div:nth-child(2) > div > div:nth-child(2) .carousel-item > div > div > p',
-        exploreFourthBannerIdea: '.Section2C .flex-column > div > div:nth-child(3) > div > div:first-child', //not clickable, after bug fix update the path
-        exploreFourthBannerTitle: '.Section2C .flex-column > div > div:nth-child(3) > div > div:first-child .carousel-item > div > div > h3',
-        exploreFourthBannerDescription: '.Section2C .flex-column > div > div:nth-child(3) > div > div:first-child .carousel-item > div > div > p',
-        exploreFifthBannerCar: '.Section2C .flex-column > div > div:nth-child(3) > div > div:nth-child(2)', //not clickable, after bug fix update the path
-        exploreFifthBannerTitle: '.Section2C .flex-column > div > div:nth-child(3) > div > div:nth-child(2) .carousel-item > div > div > h3',
-        exploreFifthBannerDescription: '.Section2C .flex-column > div > div:nth-child(3) > div > div:nth-child(2) .carousel-item > div > div > p',
+        exploreComponent: '.Section2C app-grid-layout:nth-child(2) > div',
+        exploreMainTitle: '.Section2C app-grid-layout:nth-child(2) > div > span',
+        exploreFirstBannerInstructions: '.Section2C app-grid-layout:nth-child(2) > div > div > div:first-child > div .banner-img-wrapper',
+        exploreFirstBannerTitle: '.Section2C app-grid-layout:nth-child(2) > div > div > div:first-child > div h3',
+        exploreFirstBannerDescription: '.Section2C app-grid-layout:nth-child(2) > div > div > div:first-child > div p',
+        exploreSecondBannerHelp: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:first-child .carousel-item',
+        exploreSecondBannerTitle: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:first-child .carousel-item h3',
+        exploreSecondBannerDescription: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:first-child .carousel-item p',
+        exploreThirdBannerApp: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(2) .carousel-item',
+        exploreThirdBannerTitle: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(2) .carousel-item h3',
+        exploreThirdBannerDescription: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(2) .carousel-item p',
+        exploreFourthBannerIdea: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(3) .carousel-item',
+        exploreFourthBannerTitle: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(3) .carousel-item h3',
+        exploreFourthBannerDescription: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(3) .carousel-item p',
+        exploreFifthBannerCar: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(4) .carousel-item',
+        exploreFifthBannerTitle: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(4) .carousel-item h3',
+        exploreFifthBannerDescription: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(4) .carousel-item p',
 
         //New Sets Component
         newSetsComponent: '.Section4 .category-carousel-wrapper',
@@ -81,16 +82,16 @@ module.exports = {
         //Guarantee Component
         guaranteeComponent: '.Footer > app-grid-layout > div',
         guaranteeComponentTitle: '.Footer > app-grid-layout > div > span',
-        guaranteeComponentFirst: '.Footer > app-grid-layout > div > div > div:first-child .imageLink-wrapper', //not clickable, after bug fix update the path
+        guaranteeComponentFirst: '.Footer > app-grid-layout > div > div > div:first-child .imageLink-wrapper',
         guaranteeComponentFirstDescription: '.Footer > app-grid-layout > div > div > div:first-child .imageLink-wrapper span',
-        guaranteeComponentSecond: '.Footer > app-grid-layout > div > div > div:nth-child(2) .imageLink-wrapper', //not clickable, after bug fix update the path
+        guaranteeComponentSecond: '.Footer > app-grid-layout > div > div > div:nth-child(2) .imageLink-wrapper',
         guaranteeComponentSecondDescription: '.Footer > app-grid-layout > div > div > div:nth-child(2) .imageLink-wrapper span',
-        guaranteeComponentThird: '.Footer > app-grid-layout > div > div > div:nth-child(3) .imageLink-wrapper', //not clickable, after bug fix update the path
+        guaranteeComponentThird: '.Footer > app-grid-layout > div > div > div:nth-child(3) .imageLink-wrapper',
         guaranteeComponentThirdDescription: '.Footer > app-grid-layout > div > div > div:nth-child(3) .imageLink-wrapper span',
-        guaranteeComponentFourth: '.Footer > app-grid-layout > div > div > div:nth-child(4) .imageLink-wrapper', //not clickable, after bug fix update the path
+        guaranteeComponentFourth: '.Footer > app-grid-layout > div > div > div:nth-child(4) .imageLink-wrapper',
         guaranteeComponentFourthDescription: '.Footer > app-grid-layout > div > div > div:nth-child(4) .imageLink-wrapper span',
 
-        //Signup Newsletter component
+        //Signup Newsletter component (Şu an UX'te yok kaldırıldı mı???)
         signupNewsletterComponent: '.Footer .CENTER',
         signupNewsletterTitle: '.Footer .CENTER > h3',
         signupNewsletterDescription: '.Footer .CENTER > p',

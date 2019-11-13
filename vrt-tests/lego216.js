@@ -2,7 +2,7 @@ module.exports = {
 
     'lego216'(client) {
         const email = 'burcu.ural@yopmail.com';
-        const password = 'Test_123';
+        const password = 'Burcu-123';
         const cookiesRibbon = '.cookies.text-white';
         const page = client.page.legoCookiesRibbon();
     

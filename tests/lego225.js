@@ -9,6 +9,8 @@ module.exports = {
             .maximizeWindow()
             .pause(6000)
             .acceptCookies()
+            .pause(3000)
+            .assert.elementNotPresent('@acceptCookiesButton')
             .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego225.png')

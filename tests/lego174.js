@@ -12,7 +12,7 @@ module.exports = {
                 .checkInitialElements()
                 .clickCarouselShopNowButton()
                 .pause(3000)
-                .assert.urlContains('https://www.lego.com/en-us/themes/architecture')
+                .assert.urlContains('https://lego.maf.demo.emakina.ae/vip-early-access')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego174.png')

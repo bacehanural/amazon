@@ -13,7 +13,8 @@ module.exports = {
                 .assert.elementPresent('@exploreFourthBannerTitle')
                 .assert.elementPresent('@exploreFourthBannerDescription')
                 .clickFourthBannerExplore()
-                .assert.urlContains('https://www.lego.com/en-us/search?q=Family%20building%20ideas')
+                .pause(3000)
+                .assert.elementPresent('@facetWrapper')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego182.png')

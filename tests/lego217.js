@@ -14,7 +14,7 @@ module.exports = {
                 .assert.elementPresent('@themesMainTitle')
                 .clickFirstItemThemes()
                 .pause(3000)
-                .assert.urlContains('https://www.lego.com/en-us/themes/toy-story-4')
+                .assert.elementPresent('@facetWrapper')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego217.png')

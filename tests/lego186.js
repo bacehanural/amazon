@@ -14,7 +14,7 @@ module.exports = {
                 .assert.elementPresent('@largeBannerDescription')
                 .clickBannerPlayButton()
                 .pause(3000)
-                .assert.urlContains('https://www.beko.com/es-es/Soporte')
+                .assert.urlContains('https://lego.maf.demo.emakina.ae/XXXXXXX')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego186.png')

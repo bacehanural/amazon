@@ -14,7 +14,7 @@ module.exports = {
                 .assert.elementPresent('@themesMainTitle')
                 .clickFifthItemThemes()
                 .pause(3000)
-                .assert.urlContains('https://www.lego.com/en-us/themes/city')
+                .assert.elementPresent('@facetWrapper')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego221.png')

@@ -1,7 +1,7 @@
 module.exports = {
 
     'lego165'(client) {
-        const themesComponent = '.example'; //after themes added
+        const themesComponent = '.theme-carousel-wrapper:first-child';
         const page = client.page.legoMainPage();
     
             page

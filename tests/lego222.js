@@ -14,7 +14,7 @@ module.exports = {
                 .assert.elementPresent('@themesMainTitle')
                 .clickSixthItemThemes()
                 .pause(3000)
-                .assert.urlContains('https://www.lego.com/en-us/themes/overwatch')
+                .assert.elementPresent('@facetWrapper')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego222.png')

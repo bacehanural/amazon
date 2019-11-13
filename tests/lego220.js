@@ -14,7 +14,7 @@ module.exports = {
                 .assert.elementPresent('@themesMainTitle')
                 .clickFourthItemThemes()
                 .pause(3000)
-                .assert.urlContains('https://www.lego.com/en-us/themes/ninjago')
+                .assert.elementPresent('@facetWrapper')
                 .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego220.png')

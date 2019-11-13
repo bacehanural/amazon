@@ -1,7 +1,7 @@
 module.exports = {
 
     'lego166'(client) {
-      const exploreComponent = '.Section2C .flex-column';
+      const exploreComponent = '.Section2C app-grid-layout:nth-child(2) > div';
       const page = client.page.legoMainPage();
   
           page
