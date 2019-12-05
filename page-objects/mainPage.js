@@ -75,7 +75,7 @@ module.exports = {
         //PLP
         sortByDropDownListBox: '.ProductListSlot > app-product-list cx-sorting > ng-select > div',
         sortBy: '.ProductListSlot > app-product-list cx-sorting',
-        firstSortByFilterItem: '#a0384a13ff5b-1',
+        firstSortByFilterItem: 'cx-sorting .ng-select .ng-dropdown-panel div div:nth-child(2) div:nth-child(2)',
         facetNavigationFilter: '.ProductLeftRefinements > app-custom-product-facet-navigation',
         results: '.ProductLeftRefinements > app-custom-product-facet-navigation .paginate-display',
         breadcrumb: 'app-custom-breadcrumb > div',
