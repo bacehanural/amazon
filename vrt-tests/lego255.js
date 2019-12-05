@@ -1,23 +1,22 @@
 module.exports = {
 
     'lego255'(client) {
-        const footerGeneral = '.flex-row.navigation-footer-general';
-        const page = client.page.legoFooter();
+        const bottomWrapper = '.footer-bottom-wrapper:first-child';
+        const page = client.page.mainPage();
     
             page
             .navigate()
             .maximizeWindow()
-            .pause(10000)
-                
+            .pause(6000)
                 .acceptCookies()
-                .clickThemesFirstItem()
-                .pause(6000)
-                .clickThemesPLPFirstItem()
-                .clickAddToBagButton()
-                .clickModalCheckoutButton()
-                .pause(6000);
+                
+                //burada sign in olduktan sonra footer kontrolü yapılmalı;
+
+                .checkFooterInitialElements()
+                client.moveToElement('.footer-bottom-wrapper:first-child', 100, 100);
+                page.pause(6000);
                
-                client.assert.screenshotIdenticalToBaseline(footerGeneral, 'footerGeneral');
+                client.assert.screenshotIdenticalToBaseline(bottomWrapper, 'bottomWrapper');
         }
                
     }

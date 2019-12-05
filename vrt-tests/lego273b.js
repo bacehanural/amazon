@@ -1,15 +1,15 @@
 module.exports = {
 
-    'lego216'(client) {
+    'lego273b'(client) {
         const email = 'burcu.ural@yopmail.com';
         const password = 'Burcu-123';
         const accountComponentOrderStatus = '#link-section-2';
-        const page = client.page.legoHeader();
+        const page = client.page.header();
     
             page
             .navigate()
             .maximizeWindow()
-            .pause(10000)
+            .pause(6000)
                 
                 .acceptCookies()
                 .signInPage()

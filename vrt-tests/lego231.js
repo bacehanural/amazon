@@ -4,12 +4,12 @@ module.exports = {
         const email = 'burcu.ural@yopmail.com';
         const password = 'Burcu-123';
         const accountComponentDisplayedMail = '.SiteTopHeaderRight .collapse-menu .card-body #section-1 .my-auto div:nth-child(2) span';
-        const page = client.page.legoHeader();
+        const page = client.page.header();
     
             page
             .navigate()
             .maximizeWindow()
-            .pause(10000)
+            .pause(6000)
                 
                 .acceptCookies()
                 .signInPage()

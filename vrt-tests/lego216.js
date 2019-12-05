@@ -4,7 +4,7 @@ module.exports = {
         const email = 'burcu.ural@yopmail.com';
         const password = 'Burcu-123';
         const cookiesRibbon = '.cookies.text-white';
-        const page = client.page.legoCookiesRibbon();
+        const page = client.page.register();
     
             page
             .navigate()
