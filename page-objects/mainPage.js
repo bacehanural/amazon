@@ -54,7 +54,7 @@ module.exports = {
         newSetsThirdCard: '.Section4 .carousel-item.active > div:nth-child(3) > a',
         newSetsSeeMoreMainPage: '.Section4 > app-product-carousel > div > div > div > div > a',
 
-        //Non-Product Page Elements
+        //Mega Drop Down
         firstMegaDropDown: '.NavigationBar .navWrapper > div:first-child > button',
         firstMegaFirstItem:'app-header-mega-dropdown .navWrapper > div:first-child > div > div > div > div > div.col-10.collapse.show > div > div:first-child > div > app-custom-navigation-ui:first-child > div > app-cms-link-component > div > a',
         secondMegaDropDown: '.NavigationBar .navWrapper > div:nth-child(2) > button',
@@ -75,11 +75,15 @@ module.exports = {
         //PLP
         sortByDropDownListBox: '.ProductListSlot > app-product-list cx-sorting > ng-select > div',
         sortBy: '.ProductListSlot > app-product-list cx-sorting',
+        firstSortByFilterItem: '#a0384a13ff5b-1',
         facetNavigationFilter: '.ProductLeftRefinements > app-custom-product-facet-navigation',
         results: '.ProductLeftRefinements > app-custom-product-facet-navigation .paginate-display',
         breadcrumb: 'app-custom-breadcrumb > div',
         facetFilterFirstOption: '.ProductLeftRefinements > app-custom-product-facet-navigation .flex-column:first-child > div:nth-child(3) > div:nth-child(2) #collapseExample1 div:first-child > label:first-child',
         resetAllButton: '.ProductLeftRefinements > app-custom-product-facet-navigation .flex-column:first-child > div:nth-child(3) > button',
+        starRate: 'app-product-list div:first-child > app-product-list-item cx-star-rating',
+        firstProductAddToBagButton: 'div:first-child > app-product-list-item > div > div > div > cx-add-to-cart > button',
+        thirdProductAddToBagButton: 'div:nth-child(3) > app-product-list-item > div > div > div > cx-add-to-cart > button',
 
         //my Bag
         legoReflectContainer: '.SiteLogo > cx-banner > cx-generic-link > a',
@@ -91,6 +95,7 @@ module.exports = {
         emptyBagGuestSecondDescription: '.EmptyCartMiddleContent > cx-paragraph > p > h2',
         emptyBagGuestSignIn: '.EmptyCartMiddleContent .btn-primary',
         emptyBagStartShopping: '.EmptyCartMiddleContent > cx-paragraph > p > a:nth-child(5)',
+        itemCountShoppingBag: 'app-custom-cart-details > div > .flex-row > .cart-detail-item-wrapper > div > app-custom-cart-item-list > div > div > div > .cx-item-list-desc',
 
         //PDP
         productTitle: 'app-custom-product-intro > div > span',
@@ -265,6 +270,21 @@ module.exports = {
             return this.waitForElementVisible('@resetAllButton', 1000).click('@resetAllButton');
         },
 
+        clickSortByFilter: function() {
+            return this.waitForElementVisible('@sortByDropDownListBox', 1000).click('@sortByDropDownListBox');
+        },
+
+        selectFirstSortByFilter: function() {
+            return this.waitForElementVisible('@firstSortByFilterItem', 1000).click('@firstSortByFilterItem');
+        },
+
+        clickFirstAddToBagButtonPLP: function() {
+            return this.waitForElementVisible('@firstProductAddToBagButton', 1000).click('@firstProductAddToBagButton');
+        },
+
+        clickThirdAddToBagButtonPLP: function() {
+            return this.waitForElementVisible('@thirdProductAddToBagButton', 1000).click('@thirdProductAddToBagButton');
+        },
 
         //Series Carousel Component Functions
 
@@ -325,7 +345,11 @@ module.exports = {
             return this.waitForElementVisible('@miniCart', 1000).click('@miniCart');
         },
 
+        clickStartShopping: function() {
+            return this.waitForElementVisible('@emptyBagStartShopping', 1000).click('@emptyBagStartShopping');
+        },
 
+        
         //Subscribe Field
 
         typeYourEmailAddress: function(email) {

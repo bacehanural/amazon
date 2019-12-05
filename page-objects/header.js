@@ -16,10 +16,18 @@ module.exports = {
         accountComponentLogOut: '#btn-logout',
         acceptCookiesButton: '.btn-accept',
 
+
         searchMainPage: '#typeahead-http', //search field
         searchModal: 'input[type = "text"]',
-        searchKeyword: '.dropdown-item:first-child ngb-highlight', //searched keyword on suggestion list
+        searchKeyword: '.dropdown-item:first-child ngb-highlight', //main searched keyword on suggestion list
         plpSearchResult: '.facetWrapper .for-search', //searched keyword on navigated PLP page 
+        firstSearchResult: '#ngb-typeahead-0-1 > app-search-box-results-item > div',
+        searchResultPDP: '.Summary > app-custom-product-intro > div > span',
+        searchResultNoSearchResultPage: 'app-custom-no-search-result div:first-child > span > span',
+        noSearchResultPageSearchField: 'cx-storefront > cx-page-layout #typeahead-http',
+        noSearchResultPageSearch: 'cx-storefront > cx-page-layout input[type = "text"]',
+        searchResultPLP: '.ProductLeftRefinements > app-custom-product-facet-navigation > .search-paginate > span',
+        
 
         //Registered User - Sign In
         typeEmail: 'input[type = "email"]',
@@ -80,6 +88,18 @@ module.exports = {
 
         clickSearchedKeyword: function() {
             return this.waitForElementVisible('@searchKeyword', 1000).click('@searchKeyword');
+        },
+
+        clickFirstSearchOption: function() {
+            return this.waitForElementVisible('@firstSearchResult', 1000).click('@firstSearchResult');
+        },
+
+        clickNoSearchResultPageSearch: function() {
+            return this.waitForElementVisible('@noSearchResultPageSearchField', 1000).click('@noSearchResultPageSearchField');
+        },
+
+        searchNoSearchResultPage: function(searchQuery) {
+            return this.waitForElementVisible('@noSearchResultPageSearch', 1000).setValue('@noSearchResultPageSearch', searchQuery);
         },
 
         clickLogOut: function() {
