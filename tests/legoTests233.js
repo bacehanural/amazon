@@ -25,7 +25,6 @@ module.exports = {
             .assert.elementPresent('@accountComponentDisplayedMail')
             .assert.elementPresent('@accountComponentProfileEdit')
             .assert.elementPresent('@accountComponentOrderStatus')
-            .assert.elementPresent('@accountComponentVIP')
             .assert.elementPresent('@accountComponentLogOut');
                
             client.saveScreenshot('tests_output/screenshots/lego233.png')

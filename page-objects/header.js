@@ -12,7 +12,6 @@ module.exports = {
         accountComponentDisplayedMail: '.SiteTopHeaderRight .collapse-menu .card-body #section-1 .my-auto div:nth-child(2) span',
         accountComponentProfileEdit: '#link-section-1',
         accountComponentOrderStatus: '#link-section-2',
-        accountComponentVIP: '#link-section-3',
         accountComponentLogOut: '#btn-logout',
         acceptCookiesButton: '.btn-accept',
 
@@ -72,10 +71,6 @@ module.exports = {
 
         clickOrderStatus: function() {
             return this.waitForElementVisible('@accountComponentOrderStatus', 1000).click('@accountComponentOrderStatus');
-        },
-
-        clickLegoLoyalty: function() {
-            return this.waitForElementVisible('@accountComponentVIP', 1000).click('@accountComponentVIP');
         },
 
         clickSearch: function() {

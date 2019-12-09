@@ -3,7 +3,7 @@ module.exports = {
     'lego273c'(client) {
         const email = 'burcu.ural@yopmail.com';
         const password = 'Burcu-123';
-        const accountComponentVIP = '#link-section-3';
+        const accountComponentLogOut = '#btn-logout';
         const page = client.page.header();
     
             page
@@ -19,12 +19,12 @@ module.exports = {
                 .pause(6000)
                 client.moveToElement('.SiteTopHeaderRight .myAccount-Component .collapseButton', 50, 50);
                 page
-                .waitForElementVisible('@accountComponentVIP', 1000)
-                .assert.elementPresent('@accountComponentVIP')
+                .waitForElementVisible('@accountComponentLogOut', 1000)
+                .assert.elementPresent('@accountComponentLogOut')
                 .pause(6000);
     
                
-                client.assert.screenshotIdenticalToBaseline(accountComponentVIP, 'accountComponentVIP');
+                client.assert.screenshotIdenticalToBaseline(accountComponentLogOut, 'accountComponentLogOut');
         }
                
     }
