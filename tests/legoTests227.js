@@ -11,7 +11,7 @@ module.exports = {
             .navigate()
             .waitForElementVisible('body', 60000)
             .maximizeWindow()
-            .signInAccount()
+            //Guest User için de Account'a hover edilecek
             .typeEmail(email)
             .typePassword(password)
             .clickSignInButton()

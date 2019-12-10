@@ -190,10 +190,6 @@ module.exports = {
         acceptCookies: function() {
             return this.waitForElementVisible('@acceptCookiesRibbon', 9000).click('@acceptCookiesRibbon');
         },
-
-        signInAccount: function() {
-            return this.waitForElementVisible('@signIn', 1000).click('@signIn');
-        },
         
         typeEmail: function(email) {
             return this.waitForElementVisible('@typeEmail', 1000).setValue('@typeEmail', email);

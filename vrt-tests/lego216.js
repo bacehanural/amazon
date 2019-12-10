@@ -10,7 +10,7 @@ module.exports = {
             .navigate()
             .maximizeWindow()
             .pause(6000)
-                .signInPage()
+                //Guest User için de header'daki Account'a hover edilecek
                 .typeEmail(email)
                 .typePassword(password)
                 .clickSignInButton()

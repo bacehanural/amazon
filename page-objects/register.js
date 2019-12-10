@@ -31,10 +31,6 @@ module.exports = {
     },
     commands: [{
 
-        signInPage: function() {
-            return this.waitForElementVisible('@signInButtonMainPage', 10000).click('@signInButtonMainPage');
-        },
-
         typeEmail: function(email) {
             return this.waitForElementVisible('@typeEmail', 1000).setValue('@typeEmail', email);
         },

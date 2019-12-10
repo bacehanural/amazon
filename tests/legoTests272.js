@@ -10,7 +10,7 @@ module.exports = {
             .maximizeWindow()
             .pause(6000)
             .acceptCookies()
-            .clickAccount()
+            //Guest user için de Account hover edilecek sonra sign in clicklenecek
             .pause(3000)
             .assert.elementPresent('@typeEmail')
             .assert.elementPresent('@typePassword')

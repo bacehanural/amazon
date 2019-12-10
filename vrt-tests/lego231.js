@@ -12,7 +12,7 @@ module.exports = {
             .pause(6000)
                 
                 .acceptCookies()
-                .signInPage()
+                //Guest User için de header'daki Account'a hover edilecek
                 .typeEmail(email)
                 .typePassword(password)
                 .clickSignInButton()

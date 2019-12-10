@@ -13,7 +13,7 @@ module.exports = {
             .maximizeWindow()
             .pause(3000)
             .acceptCookies()
-            .clickAccount()
+            //Guest user için de Account hover edilecek sonra sign in clicklenecek
             .typeEmail(email)
             .typePassword(password)
             .clickSignInButton()

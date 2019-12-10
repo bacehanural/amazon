@@ -10,7 +10,7 @@ module.exports = {
         .pause(6000)
         .acceptCookies()        
             .pause(3000)
-            .signInAccount()
+            //Guest User için de Account'a hover edilecek
             .pause(3000)
             //Type email address
             //Type password

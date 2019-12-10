@@ -49,10 +49,6 @@ module.exports = {
             return this.waitForElementVisible('@acceptCookiesButton', 1000).click('@acceptCookiesButton');
         },
 
-        clickAccount: function() {
-            return this.waitForElementVisible('@accountComponent', 1000).click('@accountComponent');
-        },
-
         typeEmail: function(email) {
             return this.waitForElementVisible('@typeEmail', 1000).setValue('@typeEmail', email);
         },
