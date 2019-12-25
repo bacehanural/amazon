@@ -63,6 +63,11 @@ module.exports = {
         checkoutRegisterButton: 'app-guest-checkout-login-register > div > div > .btn-warning',
         checkoutSignInButton: 'app-returning-customer-checkout-login > div > button',
 
+        //Guest User - Continue As Guest Page
+        guestEmailAddress: 'input[formcontrolname = "email"]',
+        guestConfirmEmailAddress: 'input[formcontrolname = "emailConfirmation"]',
+        guestUserContinueButton: 'app-guest-checkout-login-register > div > div > button',
+
         //Checkout Page - Delivery Options
         clickAndCollectButton: 'app-delivery-method-selector > div > div > div > .flex-column.left-wrapper > button',
         homeDeliveryButton: 'app-delivery-method-selector > div > div > div > .flex-column.right-wrapper > button',
@@ -84,7 +89,6 @@ module.exports = {
 
         //Checkout Page - Payment Method Section
         paymentMethodOrderTotal: 'app-custom-checkout-order-summary > app-custom-order-summary > div > div:nth-child(6) > div',
-
 
         creditCardNumber: 'input[formcontrolname = "cardNumber"]',
         expirationDateMonth: 'app-custom-payment-method-component div:first-child div:nth-child(2) div:first-child > ng-select',
@@ -158,7 +162,7 @@ module.exports = {
         //PLP
 
         clickFirstAddToBagButtonPLP: function() {
-            return this.waitForElementVisible('@firstProductAddToBagButton', 1000).click('@firstProductAddToBagButton');
+            return this.waitForElementVisible('@firstProductAddToBagButton', 6000).click('@firstProductAddToBagButton');
         },
 
         clickThirdAddToBagButtonPLP: function() {
@@ -195,7 +199,7 @@ module.exports = {
         },
 
         clickViewBagButton: function() {
-            return this.waitForElementVisible('@viewBagButton', 1000).click('@viewBagButton');
+            return this.waitForElementVisible('@viewBagButton', 9000).click('@viewBagButton');
         },
 
 
@@ -221,15 +225,37 @@ module.exports = {
         //Guest User Continue As Guest/Register/sign In
 
         clickCheckoutContinueAsGuestButton: function() {
-            return this.waitForElementVisible('@checkoutContinueAsGuestButton', 1000).click('@checkoutContinueAsGuestButton');
+            return this.waitForElementVisible('@checkoutContinueAsGuestButton', 4000).click('@checkoutContinueAsGuestButton');
         },
 
         clickCheckoutRegisterButton: function() {
-            return this.waitForElementVisible('@checkoutRegisterButton', 1000).click('@checkoutRegisterButton');
+            return this.waitForElementVisible('@checkoutRegisterButton', 4000).click('@checkoutRegisterButton');
         },
 
         clickCheckoutSignInButton: function() {
-            return this.waitForElementVisible('@checkoutSignInButton', 1000).click('@checkoutSignInButton');
+            return this.waitForElementVisible('@checkoutSignInButton', 4000).click('@checkoutSignInButton');
+        },
+
+        //Continue As Guest Page
+        
+        clickContinueAsGuestEmailAddress: function() {
+            return this.waitForElementVisible('@guestEmailAddress', 4000).click('@guestEmailAddress');
+        },
+
+        typeContinueAsGuestEmailAddress: function(guestEmailAddress) {
+            return this.waitForElementVisible('@guestEmailAddress', 4000).setValue('@guestEmailAddress', guestEmailAddress);
+        },
+
+        clickGuestConfirmEmailAddress: function() {
+            return this.waitForElementVisible('@guestConfirmEmailAddress', 4000).click('@guestConfirmEmailAddress');
+        },
+
+        typeGuestConfirmEmailAddress: function(creditCardNumber) {
+            return this.waitForElementVisible('@guestConfirmEmailAddress', 4000).setValue('@guestConfirmEmailAddress', guestConfirmEmailAddress);
+        },
+
+        clickGuestUserContinueButton: function() {
+            return this.waitForElementVisible('@guestUserContinueButton', 4000).click('@guestUserContinueButton');
         },
 
         //Checkout Page - Delivery Options
@@ -239,13 +265,13 @@ module.exports = {
         },
 
         homeDeliveryButton: function() {
-            return this.waitForElementVisible('@homeDeliveryButton', 1000).click('@homeDeliveryButton');
+            return this.waitForElementVisible('@homeDeliveryButton', 15000).click('@homeDeliveryButton');
         },
 
         //Checkout Page - Shipping Address Secton
         
         clickSavedAddressDropDown: function() {
-            return this.waitForElementVisible('@savedAddressDropDown', 1000).click('@savedAddressDropDown');
+            return this.waitForElementVisible('@savedAddressDropDown', 3000).click('@savedAddressDropDown');
         },
 
         selectFirstAddressOption: function() {
@@ -257,7 +283,7 @@ module.exports = {
         },
 
         clickShippingMethodDropDown: function() {
-            return this.waitForElementVisible('@shippingMethodDropDown', 1000).click('@shippingMethodDropDown');
+            return this.waitForElementVisible('@shippingMethodDropDown', 9000).click('@shippingMethodDropDown');
         },
 
         selectFirstShippingMethod: function() {
@@ -265,7 +291,7 @@ module.exports = {
         },
 
         clickDeliveryTimeDropDown: function() {
-            return this.waitForElementVisible('@deliveryTimeDropDown', 1000).click('@deliveryTimeDropDown');
+            return this.waitForElementVisible('@deliveryTimeDropDown', 9000).click('@deliveryTimeDropDown');
         },
 
         selectFirstDeliveryTime: function() {
@@ -283,66 +309,49 @@ module.exports = {
         },
 
         //Checkout Page - Payment Method Section
-        
-        checkPaymentMethodOrderTotal: function(paymentOrderTotal) {
-            paymentOrderTotal =  this.waitForElementVisible('@paymentMethodOrderTotal', 1000).getValue('@paymentMethodOrderTotal', paymentOrderTotal);
-            return paymentOrderTotal
-        },
-
-
-
 
         clickCreditCardNumber: function() {
-            return this.waitForElementVisible('@creditCardNumber', 1000).click('@creditCardNumber');
+            return this.waitForElementVisible('@creditCardNumber', 4000).click('@creditCardNumber');
         },
 
         typeCreditCardNumber: function(creditCardNumber) {
-            return this.waitForElementVisible('@creditCardNumber', 1000).setValue('@creditCardNumber', creditCardNumber);
+            return this.waitForElementVisible('@creditCardNumber', 4000).setValue('@creditCardNumber', creditCardNumber);
         },
 
         clickExpirationDateMonth: function() {
-            return this.waitForElementVisible('@expirationDateMonth', 1000).click('@expirationDateMonth');
+            return this.waitForElementVisible('@expirationDateMonth', 3000).click('@expirationDateMonth');
         },
 
         selectFirstExpirationDateMonth: function() {
-            return this.waitForElementVisible('@selectFirstMonth', 1000).click('@selectFirstMonth');
+            return this.waitForElementVisible('@selectFirstMonth', 3000).click('@selectFirstMonth');
         },
 
         clickExpirationDateYear: function() {
-            return this.waitForElementVisible('@expirationDateYear', 1000).click('@expirationDateYear');
+            return this.waitForElementVisible('@expirationDateYear', 3000).click('@expirationDateYear');
         },
 
         selectFourthExpirationDateYear: function() {
-            return this.waitForElementVisible('@selectFourthYear', 1000).click('@selectFourthYear');
+            return this.waitForElementVisible('@selectFourthYear', 3000).click('@selectFourthYear');
         },
 
         clickCreditCardSecurityCode: function() {
-            return this.waitForElementVisible('@creditCardSecurityCode', 1000).click('@creditCardSecurityCode');
+            return this.waitForElementVisible('@creditCardSecurityCode', 3000).click('@creditCardSecurityCode');
         },
 
         typeCreditCardSecurityCode: function(creditCardSecurityCode) {
-            return this.waitForElementVisible('@creditCardSecurityCode', 1000).setValue('@creditCardSecurityCode', creditCardSecurityCode);
+            return this.waitForElementVisible('@creditCardSecurityCode', 3000).setValue('@creditCardSecurityCode', creditCardSecurityCode);
         },      
         
         paymentMethodTermsConditionsCheckbox: function() {
-            return this.waitForElementVisible('@paymentMethodTermsConditionsCheckbox', 1000).click('@paymentMethodTermsConditionsCheckbox');
+            return this.waitForElementVisible('@paymentMethodTermsConditionsCheckbox', 3000).click('@paymentMethodTermsConditionsCheckbox');
         },
 
         paymentMethodPrivacyPolicyCheckbox: function() {
-            return this.waitForElementVisible('@paymentMethodPrivacyPolicyCheckbox', 1000).click('@paymentMethodPrivacyPolicyCheckbox');
+            return this.waitForElementVisible('@paymentMethodPrivacyPolicyCheckbox', 3000).click('@paymentMethodPrivacyPolicyCheckbox');
         },
 
-        clickProceedToPaymentButton: function(paymentOrderTotal) {
-            console.log(paymentOrderTotal)
-            return this.waitForElementVisible('@proceedToPaymentButton', 1000).click('@proceedToPaymentButton');
-        },
-
-
-        //Order Confirmation Page
-
-        orderConfirmationOrderTotal: function(paymentOrderTotal) {
-            paymentOrderTotal =  this.waitForElementVisible('@orderConfirmationOrderTotal', 1000).getValue('@orderConfirmationOrderTotal', paymentOrderTotal);
-            return paymentOrderTotal
+        clickProceedToPaymentButton: function() {
+            return this.waitForElementVisible('@proceedToPaymentButton', 3000).click('@proceedToPaymentButton');
         },
         
 

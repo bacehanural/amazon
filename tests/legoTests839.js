@@ -1,10 +1,9 @@
 module.exports = {
     
-    '@tags': ['lego963'],   
+    '@tags': ['lego839'],   
         'TC_Lego_Checkout'(client) {
-        let paymentOrderTotal = 'AED0.00';
-        const email = 'b.ural@yopmail.com';
-        const password = 'Burcu-123';
+        const guestEmailAddress = 'burcu.ural.emakina@yopmail.com';
+        const guestConfirmEmailAddress = 'burcu.ural.emakina@yopmail.com';
         const creditCardNumber = '4111111111111111';
         const creditCardSecurityCode = '123';
         const page = client.page.checkout();
@@ -31,26 +30,32 @@ module.exports = {
             .pause(6000)
             .clickShoppingBagCheckoutButton()
             .pause(6000)
-            .clickCheckoutSignInButton()
+            .clickCheckoutContinueAsGuestButton()
             .pause(6000)
-            .typeEmail(email)
-            .typePassword(password)
-            .clickSignInButton()
-            .pause(9000)
+
+            .clickContinueAsGuestEmailAddress()
+            .typeContinueAsGuestEmailAddress(guestEmailAddress)
+            .clickGuestConfirmEmailAddress()
+            .typeGuestConfirmEmailAddress(guestConfirmEmailAddress)
+            client.moveToElement('app-guest-checkout-login-register > div > div > button', 50, 50);
+            page
+            .clickGuestUserContinueButton()
+
+            .pause(3000)
             .homeDeliveryButton()
             .pause(1000)
             client.moveToElement('.flex-column > div > ng-select', 50, 50);
 
             page
-            .pause(6000)
+            .pause(3000)
             .clickSavedAddressDropDown()
             .selectFirstAddressOption()
             .clickShippingSectionSaveAddressButton()
 
-            .pause(5000)
+            .pause(3000)
             .clickShippingMethodDropDown()
             .selectFirstShippingMethod()
-            .pause(5000)
+            .pause(3000)
             .clickDeliveryTimeDropDown()
             .selectFirstDeliveryTime()
             .pause(6000)
@@ -65,14 +70,13 @@ module.exports = {
 
 
             client.moveToElement('app-custom-checkout-order-summary > app-custom-order-summary > div > div:nth-child(6) > div', 50, 50);
-            paymentOrderTotal = page
-            .checkPaymentMethodOrderTotal(paymentOrderTotal);
             page
-            .assert.value(paymentOrderTotal)
+            .assert.elementPresent('paymentMethodOrderTotal')
 
 
             client.moveToElement('input[formcontrolname = "cardNumber"]', 50, 50);
             page
+            .pause(3000)
             .clickCreditCardNumber()
             .typeCreditCardNumber(creditCardNumber)
             .clickExpirationDateMonth()
@@ -86,10 +90,12 @@ module.exports = {
             .clickProceedToPaymentButton(paymentOrderTotal)
             .pause(9000)
             
-            .orderConfirmationOrderTotal(paymentOrderTotal)
+            client.moveToElement('app-custom-checkout-order-summary > app-custom-order-summary > div > div:nth-child(3) > div', 50, 50);
+            page
+            .assert.elementPresent('orderConfirmationOrderTotal')
             .pause(3000);
 
-            client.saveScreenshot('tests_output/screenshots/lego963.png')
+            client.saveScreenshot('tests_output/screenshots/lego839.png')
 
         },
     }

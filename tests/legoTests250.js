@@ -3,7 +3,7 @@ module.exports = {
     '@tags': ['lego250'],   
 
         'TC_Lego_Header'(client) {
-        const email = 'b.ural@yopmail.com';
+        const email = 'burcu.ural.emakina@yopmail.com';
         const password = 'Burcu-123';
         const page = client.page.header();
     
