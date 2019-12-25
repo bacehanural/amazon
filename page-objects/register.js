@@ -11,10 +11,11 @@ module.exports = {
         save: '#example', //on consents page???
 
         //Sign in
-        typeEmail: 'input[type = "email"]',
+        typeEmail: 'input[id = "email"]',
         typePassword: 'input[type = "password"]',
         signInButton: '.btn-block.btn-primary',
-        signInButtonMainPage: '.SiteTopHeaderRight .myAccount-Component > div > button', //accountComponent
+        accountComponent: '.SiteTopHeaderRight .myAccount-Component .collapseButton',
+        signInOutButtonMainPage: '#btn-logout', 
 
         //Register (fonksiyonları yazılmadı, story henüz develpment'a alınmamış)
         title: '.container .cx-section div:first-child [formcontrolname="titleCode"]', //option seçilecek drop-down list box'tan
@@ -45,6 +46,10 @@ module.exports = {
 
         acceptCookies: function() {
             return this.waitForElementVisible('@acceptCookiesButton', 10000).click('@acceptCookiesButton');
+        },
+
+        clickSignInOutButton: function() {
+            return this.waitForElementVisible('@signInOutButtonMainPage', 10000).click('@signInOutButtonMainPage');
         },
 
         cookiesSettings: function() {

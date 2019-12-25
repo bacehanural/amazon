@@ -1,6 +1,7 @@
 module.exports = {
 
-    '@tags': ['lego272'],   
+    '@tags': ['lego1185'],   
+
         'TC_Lego_Header'(client) {
         const page = client.page.header();
     
@@ -13,12 +14,11 @@ module.exports = {
             client.moveToElement('.SiteTopHeaderRight .myAccount-Component .collapseButton', 50, 50);
 
             page
-            .clickLogInOut()
+            .clickGuestOrderStatus()
             .pause(6000)
-            .assert.elementPresent('@typeEmail')
-            .assert.elementPresent('@typePassword')
-            .assert.elementPresent('@signInButton');
-               
-            client.saveScreenshot('tests_output/screenshots/lego272.png')
+            .assert.containsText('@guestOrderStatusBreadcrumbOrderStatus', 'Order Status')
+            client.saveScreenshot('tests_output/screenshots/lego1185.png')
         },
     }
+
+

@@ -9,11 +9,15 @@ module.exports = {
         legoReflectContainer: '.SiteLogo > cx-banner > cx-generic-link > a',
         accountComponent: '.SiteTopHeaderRight .myAccount-Component .collapseButton',
         myBagDropDown: '.SiteTopHeaderRight .dropdown-toggle',
-        accountComponentDisplayedMail: '.SiteTopHeaderRight .collapse-menu .card-body #section-1 .my-auto div:nth-child(2) span',
-        accountComponentProfileEdit: '#link-section-1',
-        accountComponentOrderStatus: '#link-section-2',
-        accountComponentLogOut: '#btn-logout',
+        guestOrderStatus: '.myAccount-Component div:first-child > div > div >.section-text > a',
+        accountComponentDisplayedMail: '.myAccount-Component div:first-child .section-text > span',
+        accountComponentProfileEdit: '.myAccount-Component div:first-child > div > div >.section-text > a',
+        accountComponentOrderStatus: '.myAccount-Component div:nth-child(2) > div > div > .section-text > a',
+        accountComponentLogInOut: '#btn-logout',
         acceptCookiesButton: '.btn-accept',
+        
+        accountSelectedTab: '.nav-wrapper.selected > app-custom-navigation-ui > div > app-cms-link-component > div > a',
+        guestOrderStatusBreadcrumbOrderStatus: 'app-custom-breadcrumb > div > div.breadcrumb-title',
 
 
         searchMainPage: '#typeahead-http', //search field
@@ -29,9 +33,9 @@ module.exports = {
         
 
         //Registered User - Sign In
-        typeEmail: 'input[type = "email"]',
+        typeEmail: 'input[id = "email"]',
         typePassword: 'input[type = "password"]',
-        signInButton: '.btn-block.btn-primary',
+        signInButton: 'app-customer-login-flex div.row.row3 button',
     },
 
     commands: [{
@@ -93,8 +97,12 @@ module.exports = {
             return this.waitForElementVisible('@noSearchResultPageSearch', 1000).setValue('@noSearchResultPageSearch', searchQuery);
         },
 
-        clickLogOut: function() {
-            return this.waitForElementVisible('@accountComponentLogOut', 1000).click('@accountComponentLogOut');
+        clickGuestOrderStatus: function(searchQuery) {
+            return this.waitForElementVisible('@guestOrderStatus', 1000).click('@guestOrderStatus');
+        },
+
+        clickLogInOut: function() {
+            return this.waitForElementVisible('@accountComponentLogInOut', 1000).click('@accountComponentLogInOut');
         },
   
     }]

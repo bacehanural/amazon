@@ -3,7 +3,7 @@ module.exports = {
     '@tags': ['lego249'],   
 
         'TC_Lego_Header'(client) {
-        const email = 'burcu.ural@yopmail.com';
+        const email = 'b.ural@yopmail.com';
         const password = 'Burcu-123';
         const page = client.page.header();
     
@@ -13,7 +13,11 @@ module.exports = {
             .maximizeWindow()
             .pause(6000)
             .acceptCookies()
-            //Guest user için de Account hover edilecek sonra sign in clicklenecek
+            client.moveToElement('.SiteTopHeaderRight .myAccount-Component .collapseButton', 50, 50);
+
+            page
+            .clickLogInOut()
+            .pause(6000)
             .typeEmail(email)
             .typePassword(password)
             .clickSignInButton()
@@ -22,9 +26,9 @@ module.exports = {
 
             page
             .pause(3000)
-            .clickProfileEdit();
-            /*.pause(3000)
-            .assert.elementPresent('@ProfileEditPageCannotBeDisplayed');*/
+            .clickProfileEdit()
+            .pause(3000)
+            .assert.elementPresent('@accountSelectedTab');
                
             client.saveScreenshot('tests_output/screenshots/lego249.png')
         },

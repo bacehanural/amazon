@@ -1,8 +1,9 @@
 module.exports = {
 
-    '@tags': ['lego272'],   
-        'TC_Lego_Header'(client) {
-        const page = client.page.header();
+    '@tags': ['lego1184'],   
+
+        'TC_Lego_MainPage'(client) {
+        const page = client.page.mainPage();
     
             page
             .navigate()
@@ -15,10 +16,9 @@ module.exports = {
             page
             .clickLogInOut()
             .pause(6000)
-            .assert.elementPresent('@typeEmail')
-            .assert.elementPresent('@typePassword')
-            .assert.elementPresent('@signInButton');
-               
-            client.saveScreenshot('tests_output/screenshots/lego272.png')
+            .checkLoginPageInitialElements()   
+            client.saveScreenshot('tests_output/screenshots/lego1184.png')
         },
     }
+
+

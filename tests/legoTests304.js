@@ -1,7 +1,7 @@
 module.exports = {
 
     '@tags': ['lego304'],   
-        'TC_Lego_Footer'(client) {
+        'TC_Lego_MainPage'(client) {
         const page = client.page.mainPage();
     
             page

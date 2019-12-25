@@ -1,7 +1,7 @@
 module.exports = {
 
     '@tags': ['lego302a'],   
-        'TC_Lego_Footer'(client) {
+        'TC_Lego_MainPage'(client) {
         const email = 'burcu@1881-M.K.A.-1283&=ba5%';
         const page = client.page.mainPage();
     
@@ -15,8 +15,8 @@ module.exports = {
             page
             .typeYourEmailAddress(email)
             .clickSubscribeButton()
-           /* .waitForElementVisible('@warningMessage', 1000)
-            .assert.elementPresent('@warningMessage')*/
+            .waitForElementVisible('@footerErrorMessage', 1000)
+            .assert.elementPresent('@footerErrorMessage')
             .pause(3000);
                
             client.saveScreenshot('tests_output/screenshots/lego302a.png')

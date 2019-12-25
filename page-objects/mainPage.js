@@ -10,10 +10,12 @@ module.exports = {
         cookiesRibbon: '.cookies.text-white',
 
         //Account
-        signIn: '.SiteTopHeaderRight .myAccount-Component > div > button',
-        typeEmail: 'input[type = "email"]',
+        signIn: '.SiteTopHeaderRight .myAccount-Component .collapseButton',
+        logInOutButton: '#btn-logout',
+
+        typeEmail: 'input[id = "email"]',
         typePassword: 'input[type = "password"]',
-        signInButton: '.btn-block.btn-primary',
+        signInButton: 'app-customer-login-flex div.row.row3 button',
 
         //Main Page Elements-Carousel Component
         carouselComponent: '.Section1 .slide:first-child',
@@ -57,6 +59,7 @@ module.exports = {
         //Mega Drop Down
         firstMegaDropDown: '.NavigationBar .navWrapper > div:first-child > button',
         firstMegaFirstItem:'app-header-mega-dropdown .navWrapper > div:first-child > div > div > div > div > div.col-10.collapse.show > div > div:first-child > div > app-custom-navigation-ui:first-child > div > app-cms-link-component > div > a',
+        firstMegaTwentiethItem: '.NavigationBar > app-header-mega-dropdown div:first-child div:nth-child(2) > div > app-custom-navigation-ui:nth-child(10) a',
         secondMegaDropDown: '.NavigationBar .navWrapper > div:nth-child(2) > button',
         secondMegaFirstItem: 'app-header-mega-dropdown > div.navWrapper > div:nth-child(2)  div:first-child > div > div > button',
         shopBySeeAll: 'app-header-mega-dropdown > div.navWrapper > div:nth-child(2) .see-all-wrapper.collapse.show > .collapse.show app-cms-link-component a',
@@ -71,6 +74,7 @@ module.exports = {
         bottomWrapper: '.footer-bottom-wrapper:first-child',
         bottomWrapperLinks: '.footer-bottom-wrapper:first-child > div:first-child',
         cookiesSettings: 'app-custom-bottom-footer div:nth-child(3) > app-custom-navigation-ui > div > app-cms-link-component > div > a',
+        footerErrorMessage: 'div.footer-newsletter-form-section > app-validation-error-message > p',
 
         //PLP
         sortByDropDownListBox: '.ProductListSlot > app-product-list cx-sorting > ng-select > div',
@@ -94,15 +98,18 @@ module.exports = {
         emptyBagFirstDescription: '.EmptyCartMiddleContent > cx-paragraph > p > h1',
         emptyBagGuestSecondDescription: '.EmptyCartMiddleContent > cx-paragraph > p > h2',
         emptyBagGuestSignIn: '.EmptyCartMiddleContent .btn-primary',
-        emptyBagStartShopping: '.EmptyCartMiddleContent > cx-paragraph > p > a:nth-child(5)',
+        emptyBagStartShopping: '.EmptyCartMiddleContent > cx-paragraph:nth-child(2) > p > a',
         itemCountShoppingBag: 'app-custom-cart-details > div > .flex-row > .cart-detail-item-wrapper > div > app-custom-cart-item-list > div > div > div > .cx-item-list-desc',
 
         //PDP
         productTitle: 'app-custom-product-intro > div > span',
         addToBagButton: '.add-to-cart-wrapper > button',
 
-        //Shopping Cart
+        //Shopping Modal Page
         xButton: 'ngb-modal-window  cx-added-to-cart-dialog div.cx-dialog-header.modal-header > button',
+        removeButton: '.modal-body > div > div:nth-child(2) > div.cx-total.row > div.cx-label.col-8 > button',
+        modalPageHeader: 'ngb-modal-window > div > div > app-add-to-bag-dialog > div.cx-dialog-header.modal-header > div',
+        viewBagButton: '.modal-body > div > div > div > div:first-child > a',
 
         //Subscribe-Newsletter Field
         typeYourEmailAddress: 'input[type = "email"]',
@@ -185,10 +192,22 @@ module.exports = {
             );
         },
 
+        checkLoginPageInitialElements: function() {
+            return (
+              this.waitForElementVisible('@typeEmail', 3000)
+                .waitForElementVisible('@typePassword', 3000)
+                .waitForElementVisible('@signInButton', 3000)
+            );
+        },
+
         //Main Functions
 
         acceptCookies: function() {
             return this.waitForElementVisible('@acceptCookiesRibbon', 9000).click('@acceptCookiesRibbon');
+        },
+
+        clickLogInOut: function() {
+            return this.waitForElementVisible('@logInOutButton', 1000).click('@logInOutButton');
         },
         
         typeEmail: function(email) {
@@ -216,6 +235,10 @@ module.exports = {
 
         clickFirstMegaFirstItem: function() {
             return this.waitForElementVisible('@firstMegaFirstItem', 1000).click('@firstMegaFirstItem');
+        },
+
+        clickFirstMegaTwentiethItem: function() {
+            return this.waitForElementVisible('@firstMegaTwentiethItem', 1000).click('@firstMegaTwentiethItem');
         },
 
         clickShopBySeeAll: function() {
@@ -320,7 +343,7 @@ module.exports = {
         },
 
 
-        //PDP
+        //PDP&Shopping Modal Page
 
         clickAddToBagButton: function() {
             return this.waitForElementVisible('@addToBagButton', 1000).click('@addToBagButton');
@@ -328,6 +351,14 @@ module.exports = {
         
         clickXModal: function() {
             return this.waitForElementVisible('@xButton', 1000).click('@xButton');
+        },
+
+        clickRemoveButton: function() {
+            return this.waitForElementVisible('@removeButton', 1000).click('@removeButton');
+        },
+
+        clickViewBagButton: function() {
+            return this.waitForElementVisible('@viewBagButton', 1000).click('@viewBagButton');
         },
 
 
