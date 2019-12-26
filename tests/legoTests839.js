@@ -2,9 +2,20 @@ module.exports = {
     
     '@tags': ['lego839'],   
         'TC_Lego_Checkout'(client) {
+
         const guestEmailAddress = 'burcu.ural.emakina@yopmail.com';
         const guestConfirmEmailAddress = 'burcu.ural.emakina@yopmail.com';
-        const creditCardNumber = '4111111111111111';
+
+
+        const shippingSectionMobileNumber = '+971523555528';
+        const shippingSectionFirstName = 'Burcu';
+        const shippingSectionLastName = 'Ural';
+        const shippingSectionStreet = 'Ataturk';
+        const shippingSectionBuilding = 'Emakina';
+        const shippingSectionFloor = '5';
+        const shippingSectionAptNo = '23';
+
+        const creditCardNumber = '5555555555554444';
         const creditCardSecurityCode = '123';
         const page = client.page.checkout();
     
@@ -14,18 +25,15 @@ module.exports = {
         .pause(9000)
         .acceptCookies()        
             .pause(3000)
-            client.moveToElement('.NavigationBar .navWrapper > div:first-child > button', 50, 50);
+
+            client.moveToElement('.Section3 .carousel-inner > div:first-child > div:first-child .carousel-caption > a', 50, 50);
 
             page
-            .clickFirstMegaTwentiethItem()
+            .clickFirstCardShopNow()
             .pause(6000)
+            .clickAddToBagButton()
 
-            client.moveToElement('app-product-list > div > div > .row > div:first-child button', 50, 50);
-
-            page
-
-            .clickFirstAddToBagButtonPLP()
-            .pause(6000)
+           .pause(6000)
             .clickViewBagButton()
             .pause(6000)
             .clickShoppingBagCheckoutButton()
@@ -35,6 +43,9 @@ module.exports = {
 
             .clickContinueAsGuestEmailAddress()
             .typeContinueAsGuestEmailAddress(guestEmailAddress)
+            client.moveToElement('input[formcontrolname = "emailConfirmation"]', 50, 50);
+
+            page
             .clickGuestConfirmEmailAddress()
             .typeGuestConfirmEmailAddress(guestConfirmEmailAddress)
             client.moveToElement('app-guest-checkout-login-register > div > div > button', 50, 50);
@@ -44,20 +55,33 @@ module.exports = {
             .pause(3000)
             .homeDeliveryButton()
             .pause(1000)
-            client.moveToElement('.flex-column > div > ng-select', 50, 50);
 
+            client.moveToElement('app-custom-address > div > app-home-delivery input[formcontrolname = "cellphone"]', 50, 50);
             page
-            .pause(3000)
-            .clickSavedAddressDropDown()
-            .selectFirstAddressOption()
+            .clickShippingSectionMobileNumber()
+            .typeShippingSectionMobileNumber(shippingSectionMobileNumber)
+            .clickShippingSectionFirstName()
+            .typeShippingSectionFirstName(shippingSectionFirstName)
+            .clickShippingSectionLastName()
+            .typeShippingSectionLastName(shippingSectionLastName)
+            .clickShippingSectionSelectCountry()
+            .clickShippingSelectFirstCountry()
+            .clickShippingSectionSelectCity()
+            .clickShippingSelectFirstCity()
+            .clickShippingSectionSelectArea()
+            .clickShippingSelectFirstArea()
+            .clickShippingSectionSelectNeighborhood()
+            .clickShippingSelectFirstNeighborhood()
+            .clickShippingSectionStreet()
+            .typeShippingSectionStreet(shippingSectionStreet)
+            .clickShippingSectionBuilding()
+            .typeShippingSectionBuilding(shippingSectionBuilding)
+            .clickShippingSectionFloor()
+            .typeShippingSectionFloor(shippingSectionFloor)
+            .clickShippingSectionAptNo()
+            .typeShippingSectionAptNo(shippingSectionAptNo)
             .clickShippingSectionSaveAddressButton()
 
-            .pause(3000)
-            .clickShippingMethodDropDown()
-            .selectFirstShippingMethod()
-            .pause(3000)
-            .clickDeliveryTimeDropDown()
-            .selectFirstDeliveryTime()
             .pause(6000)
 
             client.moveToElement('app-custom-contact-information > div > div > div > label > span', 50, 50);
@@ -67,12 +91,6 @@ module.exports = {
             .pause(3000)
             .clickSaveContactInformationButton()
             .pause(6000)
-
-
-            client.moveToElement('app-custom-checkout-order-summary > app-custom-order-summary > div > div:nth-child(6) > div', 50, 50);
-            page
-            .assert.elementPresent('paymentMethodOrderTotal')
-
 
             client.moveToElement('input[formcontrolname = "cardNumber"]', 50, 50);
             page
@@ -87,16 +105,13 @@ module.exports = {
             .typeCreditCardSecurityCode(creditCardSecurityCode)
             .paymentMethodTermsConditionsCheckbox()
             .paymentMethodPrivacyPolicyCheckbox()
-            .clickProceedToPaymentButton(paymentOrderTotal)
+            .clickProceedToPaymentButton()
             .pause(9000)
-            
-            client.moveToElement('app-custom-checkout-order-summary > app-custom-order-summary > div > div:nth-child(3) > div', 50, 50);
-            page
-            .assert.elementPresent('orderConfirmationOrderTotal')
-            .pause(3000);
+
+            .checkOrderConfirmationBreadcrumb()
+            .assert.containsText('@orderConfirmationBreadcrumb', 'Order Confirmation');
 
             client.saveScreenshot('tests_output/screenshots/lego839.png')
-
         },
     }
 

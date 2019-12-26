@@ -103,7 +103,7 @@ module.exports = {
 
         //PDP
         productTitle: 'app-custom-product-intro > div > span',
-        addToBagButton: '.add-to-cart-wrapper > button',
+        addToBagButton: '.Summary > app-custom-product-add-to-cart-component > .add-to-cart-wrapper > button',
 
         //Shopping Modal Page
         xButton: 'ngb-modal-window  cx-added-to-cart-dialog div.cx-dialog-header.modal-header > button',

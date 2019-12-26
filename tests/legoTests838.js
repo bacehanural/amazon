@@ -62,12 +62,6 @@ module.exports = {
             .clickSaveContactInformationButton()
             .pause(6000)
 
-
-            client.moveToElement('app-custom-checkout-order-summary > app-custom-order-summary > div > div:nth-child(6) > div', 50, 50);
-            page
-            .assert.elementPresent('paymentMethodOrderTotal')
-
-
             client.moveToElement('input[formcontrolname = "cardNumber"]', 50, 50);
             page
             .pause(3000)
@@ -81,16 +75,13 @@ module.exports = {
             .typeCreditCardSecurityCode(creditCardSecurityCode)
             .paymentMethodTermsConditionsCheckbox()
             .paymentMethodPrivacyPolicyCheckbox()
-            .clickProceedToPaymentButton(paymentOrderTotal)
+            .clickProceedToPaymentButton()
             .pause(9000)
-            
-            client.moveToElement('app-custom-checkout-order-summary > app-custom-order-summary > div > div:nth-child(3) > div', 50, 50);
-            page
-            .assert.elementPresent('orderConfirmationOrderTotal')
-            .pause(3000);
+
+            .checkOrderConfirmationBreadcrumb()
+            .assert.containsText('@orderConfirmationBreadcrumb', 'Order Confirmation');
 
             client.saveScreenshot('tests_output/screenshots/lego838.png')
-
         },
     }
 
