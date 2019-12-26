@@ -9,9 +9,9 @@ module.exports = {
         legoReflectContainer: '.SiteLogo > cx-banner > cx-generic-link > a',
         accountComponent: '.SiteTopHeaderRight .myAccount-Component .collapseButton',
         myBagDropDown: '.SiteTopHeaderRight .dropdown-toggle',
-        guestOrderStatus: '.myAccount-Component div:first-child > div > div >.section-text > a',
+        guestOrderStatus: '.myAccount-Component div:first-child > div > div > .section-text > a',
         accountComponentDisplayedMail: '.myAccount-Component div:first-child .section-text > span',
-        accountComponentProfileEdit: '.myAccount-Component div:first-child > div > div >.section-text > a',
+        accountComponentProfileEdit: '.myAccount-Component div:first-child > div > div > .section-text > a',
         accountComponentOrderStatus: '.myAccount-Component div:nth-child(2) > div > div > .section-text > a',
         accountComponentLogInOut: '#btn-logout',
         acceptCookiesButton: '.btn-accept',
@@ -36,6 +36,19 @@ module.exports = {
         typeEmail: 'input[id = "email"]',
         typePassword: 'input[type = "password"]',
         signInButton: 'app-customer-login-flex div.row.row3 button',
+
+
+        //Series Carousel Component
+        firstCardShopNow: '.Section3 .carousel-inner > div:first-child > div:first-child .carousel-caption > a',
+        secondCardShopNow: '.Section3 .carousel-inner > div:first-child > div:nth-child(2) .carousel-caption > a',
+        thirdCardShopNow: '.Section3 .carousel-inner > div:first-child > div:nth-child(3) .carousel-caption > a',
+
+
+        //PDP
+        addToBagButton: '.Summary > app-custom-product-add-to-cart-component > .add-to-cart-wrapper > button',
+
+        //Shopping Modal Page
+        xButton: 'ngb-modal-window > div > div > app-add-to-bag-dialog > div.modal-header > button > span > cx-icon',
     },
 
     commands: [{
@@ -104,6 +117,35 @@ module.exports = {
         clickLogInOut: function() {
             return this.waitForElementVisible('@accountComponentLogInOut', 1000).click('@accountComponentLogInOut');
         },
+
+        //Series Carousel Component Functions
+
+        clickFirstCardShopNow: function() {
+            return this.waitForElementVisible('@firstCardShopNow', 6000).click('@firstCardShopNow');
+        },
+
+        clickSecondCardShopNow: function() {
+            return this.waitForElementVisible('@secondCardShopNow', 6000).click('@secondCardShopNow');
+        },
+
+        clickThirdCardShopNow: function() {
+            return this.waitForElementVisible('@thirdCardShopNow', 6000).click('@thirdCardShopNow');
+        },
+
+         //PDP&Shopping Modal Page
+
+         clickAddToBagButton: function() {
+            return this.waitForElementVisible('@addToBagButton', 6000).click('@addToBagButton');
+        },
+        
+        clickXModal: function() {
+            return this.waitForElementVisible('@xButton', 4000).click('@xButton');
+        },
+
+        clickLegoReflectContainer: function() {
+            return this.waitForElementVisible('@legoReflectContainer', 3000).click('@legoReflectContainer');
+        },//Redirects to home page-lego brand button
+
   
     }]
 };

@@ -2,7 +2,7 @@ module.exports = {
 
     '@tags': ['lego302b'],   
         'TC_Lego_MainPage'(client) {
-        const email = 'burcu.ural@yopmail.com';
+        const email = 'burcu.ural_emakina@yopmail.com';
         const page = client.page.mainPage();
     
             page

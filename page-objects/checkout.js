@@ -53,7 +53,7 @@ module.exports = {
         addToBagButton: '.Summary > app-custom-product-add-to-cart-component > .add-to-cart-wrapper > button',
 
         //Shopping Modal Page
-        xButton: 'ngb-modal-window  cx-added-to-cart-dialog div.cx-dialog-header.modal-header > button',
+        xButton: 'ngb-modal-window > div > div > app-add-to-bag-dialog > div.modal-header > button > span > cx-icon',
         removeButton: '.modal-body > div > div:nth-child(2) > div.cx-total.row > div.cx-label.col-8 > button',
         modalPageHeader: 'ngb-modal-window > div > div > app-add-to-bag-dialog > div.cx-dialog-header.modal-header > div',
         viewBagButton: '.modal-body > div > div > div > div:first-child > a',
@@ -71,6 +71,9 @@ module.exports = {
         //Checkout Page - Delivery Options
         clickAndCollectButton: 'app-delivery-method-selector > div > div > div > .flex-column.left-wrapper > button',
         homeDeliveryButton: 'app-delivery-method-selector > div > div > div > .flex-column.right-wrapper > button',
+
+        //Checkout Page Main Elements
+        checkoutOrderSummaryOrderAmount: 'app-custom-checkout-order-summary > app-custom-order-summary > .cx-summary-partials > div:nth-child(6) > .cx-summary-amount',
 
         //Checkout Page - Store Location Section
         storeLocationStoreDropDown: 'app-custom-address app-pick-up div:first-child > ng-select',
@@ -159,15 +162,15 @@ module.exports = {
         },
 
         clickLogInOut: function() {
-            return this.waitForElementVisible('@logInOutButton', 1000).click('@logInOutButton');
+            return this.waitForElementVisible('@logInOutButton', 3000).click('@logInOutButton');
         },
         
         typeEmail: function(email) {
-            return this.waitForElementVisible('@typeEmail', 1000).setValue('@typeEmail', email);
+            return this.waitForElementVisible('@typeEmail', 3000).setValue('@typeEmail', email);
         },
 
         typePassword: function(password) {
-            return this.waitForElementVisible('@typePassword', 1000).setValue('@typePassword', password);
+            return this.waitForElementVisible('@typePassword', 3000).setValue('@typePassword', password);
         },
 
         clickSignInButton: function() {
@@ -175,7 +178,7 @@ module.exports = {
         },
 
         clickLegoReflectContainer: function() {
-            return this.waitForElementVisible('@legoReflectContainer', 1000).click('@legoReflectContainer');
+            return this.waitForElementVisible('@legoReflectContainer', 3000).click('@legoReflectContainer');
         },//Redirects to home page-lego brand button
 
 
@@ -225,11 +228,11 @@ module.exports = {
         },
         
         clickXModal: function() {
-            return this.waitForElementVisible('@xButton', 1000).click('@xButton');
+            return this.waitForElementVisible('@xButton', 4000).click('@xButton');
         },
 
         clickRemoveButton: function() {
-            return this.waitForElementVisible('@removeButton', 1000).click('@removeButton');
+            return this.waitForElementVisible('@removeButton', 3000).click('@removeButton');
         },
 
         clickViewBagButton: function() {
@@ -300,6 +303,12 @@ module.exports = {
 
         homeDeliveryButton: function() {
             return this.waitForElementVisible('@homeDeliveryButton', 15000).click('@homeDeliveryButton');
+        },
+
+        //Checkout Page Main Elements
+
+        checkoutOrderSummaryOrderAmount: function(){
+            return this.waitForElementVisible('@checkoutOrderSummaryOrderAmount', 15000);
         },
 
         //Checkout Page - Store Location Section

@@ -67,7 +67,6 @@ module.exports = {
         sixthMegaFirstItem: 'app-header-mega-dropdown div:nth-child(6) div:first-child > app-custom-navigation-ui:first-child app-cms-link-component  a',
 
         //Global Foooter Component
-        guaranteeComponent: '.footer app-grid-layout app-grid-layout > div',
         newsletterComponent: '.footer-newsletter-general:first-child',
         followUsComponent: '.Footer > app-grid-layout:nth-child(3) > div',
         footerNavigation: '.navigation-footer-general:first-child',
@@ -106,7 +105,7 @@ module.exports = {
         addToBagButton: '.Summary > app-custom-product-add-to-cart-component > .add-to-cart-wrapper > button',
 
         //Shopping Modal Page
-        xButton: 'ngb-modal-window  cx-added-to-cart-dialog div.cx-dialog-header.modal-header > button',
+        xButton: 'ngb-modal-window > div > div > app-add-to-bag-dialog > div.modal-header > button > span > cx-icon',
         removeButton: '.modal-body > div > div:nth-child(2) > div.cx-total.row > div.cx-label.col-8 > button',
         modalPageHeader: 'ngb-modal-window > div > div > app-add-to-bag-dialog > div.cx-dialog-header.modal-header > div',
         viewBagButton: '.modal-body > div > div > div > div:first-child > a',
@@ -143,24 +142,23 @@ module.exports = {
 
         checkSeriesCarouselInitialElements: function() {
             return (
-              this.waitForElementVisible('@productCarousel', 1000)
-                .waitForElementVisible('@firstCardTitle', 1000)
-                .waitForElementVisible('@firstCardShopNow', 1000)
-                .waitForElementVisible('@secondCardTitle', 1000)
-                .waitForElementVisible('@secondCardShopNow', 1000)
-                .waitForElementVisible('@thirdCardTitle', 1000)
-                .waitForElementVisible('@thirdCardShopNow', 1000)
+              this.waitForElementVisible('@productCarousel', 6000)
+                .waitForElementVisible('@firstCardTitle', 6000)
+                .waitForElementVisible('@firstCardShopNow', 6000)
+                .waitForElementVisible('@secondCardTitle', 6000)
+                .waitForElementVisible('@secondCardShopNow', 6000)
+                .waitForElementVisible('@thirdCardTitle', 6000)
+                .waitForElementVisible('@thirdCardShopNow', 6000)
             );
         },
 
         checkFooterInitialElements: function() {
             return (
-              this.waitForElementVisible('@guaranteeComponent', 1000)
-                .waitForElementVisible('@newsletterComponent', 1000)
-                .waitForElementVisible('@followUsComponent', 1000)
-                .waitForElementVisible('@footerNavigation', 1000)
-                .waitForElementVisible('@bottomWrapper', 1000)
-                .waitForElementVisible('@bottomWrapperLinks', 1000)
+              this.waitForElementVisible('@newsletterComponent', 6000)
+                .waitForElementVisible('@followUsComponent', 6000)
+                .waitForElementVisible('@footerNavigation', 6000)
+                .waitForElementVisible('@bottomWrapper', 6000)
+                .waitForElementVisible('@bottomWrapperLinks', 6000)
             );
         },
 
