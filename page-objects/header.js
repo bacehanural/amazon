@@ -29,7 +29,8 @@ module.exports = {
         searchResultNoSearchResultPage: 'app-custom-no-search-result div:first-child > span > span',
         noSearchResultPageSearchField: 'cx-storefront > cx-page-layout #typeahead-http',
         noSearchResultPageSearch: 'cx-storefront > cx-page-layout input[type = "text"]',
-        searchResultPLP: '.ProductLeftRefinements > app-custom-product-facet-navigation > .search-paginate > span',
+        searchResultPLP: '.ProductLeftRefinements > app-custom-product-facet-navigation > .search-paginate > div > span',
+        searchResultPLPKeyword: '.ProductLeftRefinements > app-custom-product-facet-navigation > .search-paginate > div > span > b',
         
 
         //Registered User - Sign In

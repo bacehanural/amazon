@@ -29,7 +29,8 @@ module.exports = {
                 .pause(3000)
                 .clickSearchedKeyword()
                 .pause(6000)
-                .assert.containsText('@searchResultPLP', 'Showing results for "lego"');
+                .assert.containsText('@searchResultPLP', 'Showing results for')
+                .assert.containsText('@searchResultPLPKeyword', 'lego');
                
                 client.saveScreenshot('tests_output/screenshots/lego901.png')
         }
