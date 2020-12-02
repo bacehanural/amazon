@@ -1,213 +1,192 @@
 module.exports = {
 
-    url: 'https://lego.c1xjddw2-majidalfu1-d1-public.model-t.cc.commerce.ondemand.com/',
+    url: 'https://www.lidyana.com/',
     
     elements: {
 
-        //Main Page Elements-Cookies Ribbon
-        acceptCookiesRibbon: '.btn-accept',
-        cookiesSettingsRibbon: '.btn-white',
-        cookiesRibbon: '.cookies.text-white',
+        //Main Page Elements
+        lidyanaLogo: '.header-logo',
+        search: '.search-box input[id = "query"]',
+        login: '.site-header-v2 > div:nth-child(4) nav .user-nav-login',
+        wishlist: '.site-header-v2 > div:nth-child(4) nav .wishlist-icon',
+        shoppingBag: '.site-header-v2 > div:nth-child(4) nav .user-nav-cart',
 
-        //Account
-        signIn: '.SiteTopHeaderRight .myAccount-Component .collapseButton',
-        logInOutButton: '#btn-logout',
 
-        typeEmail: 'input[id = "email"]',
-        typePassword: 'input[type = "password"]',
-        signInButton: 'app-customer-login-flex div.row.row3 button',
 
-        //Main Page Elements-Carousel Component
-        carouselComponent: '.Section1 .slide:first-child',
-        carouselDescription : '.Section1 .slide:first-child .RIGHT > p',
-        carouselShopNowButton : '.Section1 .slide:first-child .btn-primary',
-        carouselNext : '.Section1 .next',
-        carouselPrev : '.Section1 .previous',
-        carouselFirstDot : '.Section1 .indicators > button:first-child',
+        //Cookies
+        acceptCookiesRibbon: '.cookie-warning-close',
 
-        //Series Carousel Component
-        productCarousel : '.Section3 .carousel',
-        firstCardTitle: '.Section3 .carousel-inner > div:first-child > div:first-child .carousel-caption > h3',
-        firstCardShopNow: '.Section3 .carousel-inner > div:first-child > div:first-child .carousel-caption > a',
-        secondCardTitle: '.Section3 .carousel-inner > div:first-child > div:nth-child(2) .carousel-caption > h3',
-        secondCardShopNow: '.Section3 .carousel-inner > div:first-child > div:nth-child(2) .carousel-caption > a',
-        thirdCardTitle: '.Section3 .carousel-inner > div:first-child > div:nth-child(3) .carousel-caption > h3',
-        thirdCardShopNow: '.Section3 .carousel-inner > div:first-child > div:nth-child(3) .carousel-caption > a',
 
-        //Themes Component
-        themesComponent: '.theme-carousel-wrapper:first-child',
-        themesSeeMoreMainPage: '.Section2C > app-themes-carousel > div > div > div > a',
-        themesPageSorting: '.TopCategory > app-custom-themes-listing > div > .sorting.column',
-        themesFirstItemMainPage: '.theme-carousel-wrapper:first-child .item-wrapper:first-child a',
-        themesSecondItemMainPage: '.theme-carousel-wrapper:first-child .item-wrapper:nth-child(2) a',
-        themesThirdItemMainPage: '.theme-carousel-wrapper:first-child .item-wrapper:nth-child(3) a',
-        themesFouthItemMainPage: '.theme-carousel-wrapper:first-child .item-wrapper:nth-child(4) a',
 
-        //Explore Component
-        exploreComponent: '.Section2C app-grid-layout:nth-child(2) > div',
-        exploreFirstBannerInstructions: '.Section2C app-grid-layout:nth-child(2) > div > div > div:first-child > div .banner-img-wrapper',
-        exploreFourthBannerIdea: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(3) .carousel-item',
-        exploreFifthBannerCar: '.Section2C app-grid-layout:nth-child(2) app-grid-layout > div > div > div:nth-child(4) .carousel-item',
+        //Login
+        typeEmail: 'nav:nth-child(2) .header-dropdown input[id = "topLogin_email"]',
+        typePassword: 'nav:nth-child(2) .header-dropdown input[id = "topLogin_password"]',
+        signInButton: 'nav:nth-child(2) .header-dropdown .btn-submit',
 
-        //New Sets
-        newSetsComponent: '.Section4 .category-carousel-wrapper',
-        newSetsFirstCard: '.Section4 .carousel-item.active > div:first-child > a',
-        newSetsSecondCard: '.Section4 .carousel-item.active > div:nth-child(2) > a',
-        newSetsThirdCard: '.Section4 .carousel-item.active > div:nth-child(3) > a',
-        newSetsSeeMoreMainPage: '.Section4 > app-product-carousel > div > div > div > div > a',
 
-        //Mega Drop Down
-        firstMegaDropDown: '.NavigationBar .navWrapper > div:first-child > button',
-        firstMegaFirstItem:'app-header-mega-dropdown .navWrapper > div:first-child > div > div > div > div > div.col-10.collapse.show > div > div:first-child > div > app-custom-navigation-ui:first-child > div > app-cms-link-component > div > a',
-        firstMegaTwentiethItem: '.NavigationBar > app-header-mega-dropdown div:first-child div:nth-child(2) > div > app-custom-navigation-ui:nth-child(10) a',
-        secondMegaDropDown: '.NavigationBar .navWrapper > div:nth-child(2) > button',
-        secondMegaFirstItem: 'app-header-mega-dropdown > div.navWrapper > div:nth-child(2)  div:first-child > div > div > button',
-        shopBySeeAll: 'app-header-mega-dropdown > div.navWrapper > div:nth-child(2) .see-all-wrapper.collapse.show > .collapse.show app-cms-link-component a',
-        sixthMegaDropDown: '.NavigationBar .navWrapper > div:nth-child(6) > button',
-        sixthMegaFirstItem: 'app-header-mega-dropdown div:nth-child(6) div:first-child > app-custom-navigation-ui:first-child app-cms-link-component  a',
 
-        //Global Foooter Component
-        newsletterComponent: '.footer-newsletter-general:first-child',
-        followUsComponent: '.Footer > app-grid-layout:nth-child(3) > div',
-        footerNavigation: '.navigation-footer-general:first-child',
-        bottomWrapper: '.footer-bottom-wrapper:first-child',
-        bottomWrapperLinks: '.footer-bottom-wrapper:first-child > div:first-child',
-        cookiesSettings: 'app-custom-bottom-footer div:nth-child(3) > app-custom-navigation-ui > div > app-cms-link-component > div > a',
-        footerErrorMessage: 'div.footer-newsletter-form-section > app-validation-error-message > p',
+        //My Profile Drop-Down List Box
+        contactDetails: 'div:nth-child(4) .user-nav-login .header-dropdown a:first-child',
+        logout: 'div:nth-child(4) .user-nav-login .header-dropdown a:nth-child(3)',
 
-        //PLP
-        sortByDropDownListBox: '.ProductListSlot > app-product-list cx-sorting > ng-select > div',
-        sortBy: '.ProductListSlot > app-product-list cx-sorting',
-        firstSortByFilterItem: 'cx-sorting .ng-select .ng-dropdown-panel div div:nth-child(2) div:nth-child(2)',
-        facetNavigationFilter: '.ProductLeftRefinements > app-custom-product-facet-navigation',
-        results: '.ProductLeftRefinements > app-custom-product-facet-navigation .paginate-display',
-        breadcrumb: 'app-custom-breadcrumb > div',
-        facetFilterFirstOption: '.ProductLeftRefinements > app-custom-product-facet-navigation .flex-column:first-child > div:nth-child(3) > div:nth-child(2) #collapseExample1 div:first-child > label:first-child',
-        resetAllButton: '.ProductLeftRefinements > app-custom-product-facet-navigation .flex-column:first-child > div:nth-child(3) > button',
-        starRate: 'app-product-list div:first-child > app-product-list-item cx-star-rating',
-        firstProductAddToBagButton: 'div:first-child > app-product-list-item > div > div > div > cx-add-to-cart > button',
-        thirdProductAddToBagButton: 'div:nth-child(3) > app-product-list-item > div > div > div > cx-add-to-cart > button',
 
-        //my Bag
-        legoReflectContainer: '.SiteLogo > cx-banner > cx-generic-link > a',
-        miniCart: '#dropdownManual',
-        miniCartDropDownMenu: '.SiteTopHeaderRight > app-mini-cart > div > div > div',
-        addedFirstProduct: '#miniCart-0 div:first-child > div.col-8 > div',
-        emptyBagHeader: '.EmptyCartMiddleContent > cx-paragraph > p > div',
-        emptyBagFirstDescription: '.EmptyCartMiddleContent > cx-paragraph > p > h1',
-        emptyBagGuestSecondDescription: '.EmptyCartMiddleContent > cx-paragraph > p > h2',
-        emptyBagGuestSignIn: '.EmptyCartMiddleContent .btn-primary',
-        emptyBagStartShopping: '.EmptyCartMiddleContent > cx-paragraph:nth-child(2) > p > a',
-        itemCountShoppingBag: 'app-custom-cart-details > div > .flex-row > .cart-detail-item-wrapper > div > app-custom-cart-item-list > div > div > div > .cx-item-list-desc',
 
-        //PDP
-        productTitle: 'app-custom-product-intro > div > span',
-        addToBagButton: '.Summary > app-custom-product-add-to-cart-component > .add-to-cart-wrapper > button',
+        //Contact Information
+        emailValidation: '.account-content .validate > div:nth-child(3) > input[value="burcuacehanural@yopmail.com"]',
+        myAccountMenuBar: '.account-content h1',
+        myAccountField: '.account-sidebar p',
 
-        //Shopping Modal Page
-        xButton: 'ngb-modal-window > div > div > app-add-to-bag-dialog > div.modal-header > button > span > cx-icon',
-        removeButton: '.modal-body > div > div:nth-child(2) > div.cx-total.row > div.cx-label.col-8 > button',
-        modalPageHeader: 'ngb-modal-window > div > div > app-add-to-bag-dialog > div.cx-dialog-header.modal-header > div',
-        viewBagButton: '.modal-body > div > div > div > div:first-child > a',
 
-        //Subscribe-Newsletter Field
-        typeYourEmailAddress: 'input[type = "email"]',
-        subscribeButton: '.footer-newsletter-form-section > button',
 
-        //Cookies Settings Page
-        requiredCookiesRadioButton: 'app-cookie-settings-flex > div > div.row.option > label > input[type=radio]',
-        functionalCookiesCheckBox: 'app-cookie-settings-flex > div > div:nth-child(2) > div:first-child > label',
-        marketingCookiesCheckBox: 'app-cookie-settings-flex > div > div:nth-child(2) > div:nth-child(2) > label',
-        saveButton: 'app-cookie-settings-flex > div > div:nth-child(2) > div.row.submit > button',
-        cookieSettingsLink: 'cx-page-slot > cx-paragraph > p',
-        privacyPollicyLink: 'cx-paragraph > p > a:first-child',
-        cookiePolicyLink: 'cx-paragraph > p > a:nth-child(2)',
+        //Search
+        searchOptionFirstCategory: '.search-box .search-suggestions .category-suggestion li:first-child',
+
+
+
+        //Product Listing Page
+        categoryBreadcrumb: '.urlTitle',
+        categoryHeader: '.category-title-content .category-title',
+        
+
+
+        //Product Detail Page
+        productCardFirstProductPLP: 'li:first-child .product-list-link',
+        addToBagButtonPDP: '.btn-primary.eventAddToCart',
+        
+
+
+        //Wishlist
+        firstProductPLPWishlistIcon: 'div:nth-child(4) li:first-child .product-list-fav',
+        wishlistFirstProduct: '.products.type2 > ul:first-child > .product-list-item:first-child',
+        continueShoppingButtonWishlistPage: '.wishlist-header.empty-wishlist .btn-primary',
+        firstProductWishlistPageWishlistIcon: 'li:first-child .product-list-fav',
+
+
+        
+        //Modal Page
+        modalPageOk: '.modal-footer .btn-primary',
+
+
+
+        //Newsletter
+        womanRadioButton: 'input[id="womanFooter"]',
+        newsletterEmail: 'input[id="footerEmail"]',
+        newsletterSubmitButton: '.input-group-btn',
+        modalPage: '.modal.scrollable',
+
+
+
+        //Shopping Bag
+        submitShoppingBag: '.button-normal',
+        checkoutButton: '.cart-nav-buttons .btn-primary',
+
+
+
+        //Checkout Page
+        shippingAddressDropDownListBox: 'div:first-child > div:nth-child(2) > div:first-child > select',
+
+
+
+        //My Addresses
+        addressesMenuBar: '.account-sidebar nav li:nth-child(14)',
+        newAddressButton: '.account-content .account-new-address',
+        addressTitle: '.account-content input[id="alias"]',
+        addressFirstName: '.account-content input[id="name"]',
+        addressLastName: '.account-content input[id="lastname"]',
+        addressPhoneNumber: '.account-content input[id="phone"]',
+        addressAddress: '.account-content textarea[id="address"]',
+        addressCountry: '.account-content select[id="country_code"]',
+        selectAddressCountry: '.account-content select[id="country_code"] option:nth-child(208)',
+        addressCity: '.account-content select[id="city_id"]',
+        selectAddressCity: '.account-content select[id="city_id"] option:nth-child(4)',
+        addressDistrict: '.account-content select[id="district_id"]',
+        selectAddressDistrict: '.account-content select[id="district_id"] option:nth-child(23)',
+        addressPostCode: '.account-content input[id="postal_code"]',
+        addNewAddressButton: '.address-form-buttons .btn-primary',
+        deleteAddedAddress: '.account-address-wrap > div:first-child > div > button[type="button"]',
+        
+        addressDeleteButton: '.account-address-box-buttons button[type="button"]',
+        addressUpdateButton: '.account-address-box-buttons > a',
+        newlyCreatedAddressWholeField: '.account-address-box',
+        newlyCreatedAddressDisplay: '.account-address-box .overflow',
+        recipientNameDisplay: '.account-address-box strong',
+        addressRegionDisplay: '.account-address-box p:nth-child(3)',
+        phoneNumberAddressDisplay: '.account-address-box p:nth-child(4)',
+
+
+
+        //Checkout Page
+
+        creditCardName: 'input[id="cc_name"]',
+        creditCardNo: 'input[id="cc_no"]',
+        creditCardExpirationMonth: '.checkv4__select.left-col',
+        creditCardExpirationJanuary: '.checkv4__select.left-col option:nth-child(2)',
+        creditCardExpirationYear: '.checkv4__select.right-col',
+        creditCardExpirationYearSecond: '.checkv4__select.right-col option:nth-child(4)',
+        creditCardSecurityNumber: 'input[id="cc_cvc"]',
+        proceedPaymentButton: '.checkv4-buy.desktop-only .btn-primary',
+
     },
 
     
+
     commands: [{
 
         //Initials
 
-        checkCarouselInitialElements: function() {
+        checkInitialElements: function() {
             return (
-              this.waitForElementVisible('@carouselComponent', 1000)
-                .waitForElementVisible('@carouselDescription', 1000)
-                .waitForElementVisible('@carouselShopNowButton', 1000)
-                .waitForElementVisible('@carouselNext', 1000)
-                .waitForElementVisible('@carouselPrev', 1000)
-                .waitForElementVisible('@carouselFirstDot', 1000)
+              this.waitForElementVisible('@lidyanaLogo', 1000)
+                .waitForElementVisible('@search', 1000)
+                .waitForElementVisible('@login', 1000)
+                .waitForElementVisible('@wishlist', 1000)
+                .waitForElementVisible('@shoppingBag', 1000)
             );
         },
 
-        checkSeriesCarouselInitialElements: function() {
+
+
+        //Newly Created Address Validation
+
+        myAddressFieldValidation: function() {
             return (
-              this.waitForElementVisible('@productCarousel', 6000)
-                .waitForElementVisible('@firstCardTitle', 6000)
-                .waitForElementVisible('@firstCardShopNow', 6000)
-                .waitForElementVisible('@secondCardTitle', 6000)
-                .waitForElementVisible('@secondCardShopNow', 6000)
-                .waitForElementVisible('@thirdCardTitle', 6000)
-                .waitForElementVisible('@thirdCardShopNow', 6000)
+              this.waitForElementVisible('@addressDeleteButton', 1000)
+                .waitForElementVisible('@addressUpdateButton', 1000)
+                .waitForElementVisible('@newlyCreatedAddressWholeField', 1000)
+                .waitForElementVisible('@newlyCreatedAddressDisplay', 1000)
+                .waitForElementVisible('@recipientNameDisplay', 1000)
+                .waitForElementVisible('@addressRegionDisplay', 1000)
+                .waitForElementVisible('@phoneNumberAddressDisplay', 1000)
             );
         },
 
-        checkFooterInitialElements: function() {
+
+
+        //Newly Created Address Assertion
+
+        myAddressFieldAssertions: function() {
             return (
-              this.waitForElementVisible('@newsletterComponent', 6000)
-                .waitForElementVisible('@followUsComponent', 6000)
-                .waitForElementVisible('@footerNavigation', 6000)
-                .waitForElementVisible('@bottomWrapper', 6000)
-                .waitForElementVisible('@bottomWrapperLinks', 6000)
+              this.assert.elementPresent('@addressDeleteButton')
+                .assert.elementPresent('@addressUpdateButton')
+                .assert.elementPresent('@newlyCreatedAddressWholeField')
+                .assert.elementPresent('@newlyCreatedAddressDisplay')
+                .assert.elementPresent('@recipientNameDisplay')
+                .assert.elementPresent('@addressRegionDisplay')
+                .assert.elementPresent('@phoneNumberAddressDisplay')
             );
         },
 
-        checkGuestEmptyBagInitialElements: function() {
-            return (
-              this.waitForElementVisible('@emptyBagHeader', 3000)
-                .waitForElementVisible('@emptyBagFirstDescription', 3000)
-                .waitForElementVisible('@emptyBagGuestSecondDescription', 3000)
-                .waitForElementVisible('@emptyBagGuestSignIn', 3000)
-                .waitForElementVisible('@emptyBagStartShopping', 3000)
-            );
-        },
-
-        checkRegisteredEmptyBagInitialElements: function() {
-            return (
-              this.waitForElementVisible('@emptyBagHeader', 3000)
-                .waitForElementVisible('@emptyBagFirstDescription', 3000)
-                .waitForElementVisible('@emptyBagStartShopping', 3000)
-            );
-        },
-
-        checkCookieSettingsPageInitialElements: function() {
-            return (
-              this.waitForElementVisible('@requiredCookiesRadioButton', 3000)
-                .waitForElementVisible('@functionalCookiesCheckBox', 3000)
-                .waitForElementVisible('@marketingCookiesCheckBox', 3000)
-                .waitForElementVisible('@saveButton', 3000)
-                .waitForElementVisible('@cookieSettingsLink', 3000)
-            );
-        },
-
-        checkLoginPageInitialElements: function() {
-            return (
-              this.waitForElementVisible('@typeEmail', 3000)
-                .waitForElementVisible('@typePassword', 3000)
-                .waitForElementVisible('@signInButton', 3000)
-            );
-        },
 
         //Main Functions
-
-        acceptCookies: function() {
-            return this.waitForElementVisible('@acceptCookiesRibbon', 9000).click('@acceptCookiesRibbon');
-        },
-
-        clickLogInOut: function() {
-            return this.waitForElementVisible('@logInOutButton', 1000).click('@logInOutButton');
-        },
         
+        acceptCookies: function() {
+            return this.waitForElementVisible('@acceptCookiesRibbon', 4000).click('@acceptCookiesRibbon');
+        },
+
+        clickLogin: function() {
+            return this.waitForElementVisible('@login', 1000).click('@login');
+        },
+
         typeEmail: function(email) {
             return this.waitForElementVisible('@typeEmail', 1000).setValue('@typeEmail', email);
         },
@@ -217,179 +196,232 @@ module.exports = {
         },
 
         clickSignInButton: function() {
-            return this.waitForElementVisible('@signInButton', 10000).click('@signInButton');
-        },
-
-        clickLegoReflectContainer: function() {
-            return this.waitForElementVisible('@legoReflectContainer', 1000).click('@legoReflectContainer');
-        },//Redirects to home page-lego brand button
-
-
-        //Mega drop-down list box
-
-        clickSixthMegaFirstItem: function() {
-            return this.waitForElementVisible('@sixthMegaFirstItem', 1000).click('@sixthMegaFirstItem');
-        },
-
-        clickFirstMegaFirstItem: function() {
-            return this.waitForElementVisible('@firstMegaFirstItem', 1000).click('@firstMegaFirstItem');
-        },
-
-        clickFirstMegaTwentiethItem: function() {
-            return this.waitForElementVisible('@firstMegaTwentiethItem', 1000).click('@firstMegaTwentiethItem');
-        },
-
-        clickShopBySeeAll: function() {
-            return this.waitForElementVisible('@shopBySeeAll', 3000).click('@shopBySeeAll');
+            return this.waitForElementVisible('@signInButton', 1000).click('@signInButton');
         },
 
 
-        //New Sets Functions
 
-        clickNewSetsFirstItem: function() {
-            return this.waitForElementVisible('@newSetsFirstCard', 1000).click('@newSetsFirstCard');
-        },
+        //Profile Functions
 
-        clickNewSetsSecondItem: function() {
-            return this.waitForElementVisible('@newSetsSecondCard', 1000).click('@newSetsSecondCard');
-        },
-
-        clickNewSetsThirdItem: function() {
-            return this.waitForElementVisible('@newSetsThirdCard', 1000).click('@newSetsThirdCard');
-        },
-
-        clickSeeMoreNewSets: function() {
-            return this.waitForElementVisible('@newSetsSeeMoreMainPage', 1000).click('@newSetsSeeMoreMainPage');
+        clickAccountInformation: function() {
+            return this.waitForElementVisible('@contactDetails', 1000).click('@contactDetails');
         },
 
 
-        //Explore Functions:
 
-        clickFirstBannerExplore: function() {
-            return this.waitForElementVisible('@exploreFirstBannerInstructions', 1000).click('@exploreFirstBannerInstructions');
-        },
+        //Logout Function
 
-        clickFourthBannerExplore: function() {
-            return this.waitForElementVisible('@exploreFourthBannerIdea', 1000).click('@exploreFourthBannerIdea');
-        },
-
-        clickFifthBannerExplore: function() {
-            return this.waitForElementVisible('@exploreFifthBannerCar', 1000).click('@exploreFifthBannerCar');
-        },
-
-        //PLP
-        
-        clickFacetFilterFirstOption: function() {
-            return this.waitForElementVisible('@facetFilterFirstOption', 1000).click('@facetFilterFirstOption');
-        },
-
-        clickResetAll: function() {
-            return this.waitForElementVisible('@resetAllButton', 1000).click('@resetAllButton');
-        },
-
-        clickSortByFilter: function() {
-            return this.waitForElementVisible('@sortByDropDownListBox', 1000).click('@sortByDropDownListBox');
-        },
-
-        selectFirstSortByFilter: function() {
-            return this.waitForElementVisible('@firstSortByFilterItem', 1000).click('@firstSortByFilterItem');
-        },
-
-        clickFirstAddToBagButtonPLP: function() {
-            return this.waitForElementVisible('@firstProductAddToBagButton', 1000).click('@firstProductAddToBagButton');
-        },
-
-        clickThirdAddToBagButtonPLP: function() {
-            return this.waitForElementVisible('@thirdProductAddToBagButton', 1000).click('@thirdProductAddToBagButton');
-        },
-
-        //Series Carousel Component Functions
-
-        clickFirstCardShopNow: function() {
-            return this.waitForElementVisible('@firstCardShopNow', 1000).click('@firstCardShopNow');
-        },
-
-        clickSecondCardShopNow: function() {
-            return this.waitForElementVisible('@secondCardShopNow', 1000).click('@secondCardShopNow');
-        },
-
-        clickThirdCardShopNow: function() {
-            return this.waitForElementVisible('@thirdCardShopNow', 1000).click('@thirdCardShopNow');
+        clickLogout: function() {
+            return this.waitForElementVisible('@logout', 1000).click('@logout');
         },
 
 
-        //Themes - Main Page
 
-        clickSeeMoreThemes: function() {
-            return this.waitForElementVisible('@themesSeeMoreMainPage', 1000).click('@themesSeeMoreMainPage');
+        //Search Functions
+
+        clickSearch: function() {
+            return this.waitForElementVisible('@search', 1000).click('@search');
         },
 
-        clickFirstItemThemes: function() {
-            return this.waitForElementVisible('@themesFirstItemMainPage', 1000).click('@themesFirstItemMainPage');
+        searchMainPage: function(mainQuery) {
+            return this.waitForElementVisible('@search', 1000).setValue('@search', mainQuery);
         },
 
-        clickSecondItemThemes: function() {
-            return this.waitForElementVisible('@themesSecondItemMainPage', 1000).click('@themesSecondItemMainPage');
-        },
-
-        clickThirdItemThemes: function() {
-            return this.waitForElementVisible('@themesThirdItemMainPage', 1000).click('@themesThirdItemMainPage');
-        },
-
-        clickFourthItemThemes: function() {
-            return this.waitForElementVisible('@themesFouthItemMainPage', 1000).click('@themesFouthItemMainPage');
+        clickSearchOptionFirstCategory: function() {
+            return this.waitForElementVisible('@searchOptionFirstCategory', 1000).click('@searchOptionFirstCategory');
         },
 
 
-        //PDP&Shopping Modal Page
 
-        clickAddToBagButton: function() {
-            return this.waitForElementVisible('@addToBagButton', 1000).click('@addToBagButton');
+        //Wishlist Functions
+
+        clickFirstProductPLPWishlistIcon: function() {
+            return this.waitForElementVisible('@firstProductPLPWishlistIcon', 2000).click('@firstProductPLPWishlistIcon');
+        },
+
+
+        clickFirstProductWishlistPageWishlistIcon: function() {
+            return this.waitForElementVisible('@firstProductWishlistPageWishlistIcon', 2000).click('@firstProductWishlistPageWishlistIcon');
+        },
+
+
+        clickWishlistIcon: function() {
+            return this.waitForElementVisible('@wishlist', 3000).click('@wishlist');
         },
         
-        clickXModal: function() {
-            return this.waitForElementVisible('@xButton', 1000).click('@xButton');
-        },
 
-        clickRemoveButton: function() {
-            return this.waitForElementVisible('@removeButton', 1000).click('@removeButton');
-        },
 
-        clickViewBagButton: function() {
-            return this.waitForElementVisible('@viewBagButton', 1000).click('@viewBagButton');
+        //Modal Page Functions
+
+        clickModalPageOk: function() {
+            return this.waitForElementVisible('@modalPageOk', 1000).click('@modalPageOk');
         },
 
 
-        //My Bag Functions
 
-        clickAddedFirstProduct: function() {
-            return this.waitForElementVisible('@addedFirstProduct', 1000).click('@addedFirstProduct');
+        //Newsletter Functions
+
+        clickWomanRadioButton: function() {
+            return this.waitForElementVisible('@womanRadioButton', 1000).click('@womanRadioButton');
         },
 
-        clickMiniCart: function() {
-            return this.waitForElementVisible('@miniCart', 1000).click('@miniCart');
+        typeNewsletterEmail: function(newsletterEmail) {
+            return this.waitForElementVisible('@newsletterEmail', 1000).setValue('@newsletterEmail', newsletterEmail);
         },
 
-        clickStartShopping: function() {
-            return this.waitForElementVisible('@emptyBagStartShopping', 1000).click('@emptyBagStartShopping');
+        clickNewsletterSubmit: function() {
+            return this.waitForElementVisible('@newsletterSubmitButton', 1000).click('@newsletterSubmitButton');
+        },
+
+
+
+        //My Addresses Functions
+        
+        clickAddressMenuBar: function() {
+            return this.waitForElementVisible('@addressesMenuBar', 1000).click('@addressesMenuBar');
+        },
+
+        clickNewAddress: function() {
+            return this.waitForElementVisible('@newAddressButton', 1000).click('@newAddressButton');
+        },
+
+        typeAddressTitle: function(addressTitle) {
+            return this.waitForElementVisible('@addressTitle', 1000).setValue('@addressTitle', addressTitle);
+        },      
+
+        typeAddressFirstName: function(addressFirstName) {
+            return this.waitForElementVisible('@addressFirstName', 1000).setValue('@addressFirstName', addressFirstName);
+        },
+
+        typeAddressLastName: function(addressLastName) {
+            return this.waitForElementVisible('@addressLastName', 1000).setValue('@addressLastName', addressLastName);
+        },
+
+        typeAddressPhoneNumber: function(addressPhoneNumber) {
+            return this.waitForElementVisible('@addressPhoneNumber', 1000).setValue('@addressPhoneNumber', addressPhoneNumber);
+        },
+
+        typeAddressAddress: function(addressAddress) {
+            return this.waitForElementVisible('@addressAddress', 1000).setValue('@addressAddress', addressAddress);
+        },
+
+        clickAddressCountry: function() {
+            return this.waitForElementVisible('@addressCountry', 1000).click('@addressCountry');
+        },
+
+        selectAddressCountry: function() {
+            return this.waitForElementVisible('@selectAddressCountry', 1000).click('@selectAddressCountry');
+        },
+
+        clickAddressCity: function() {
+            return this.waitForElementVisible('@addressCity', 1000).click('@addressCity');
+        },
+
+        selectAddressCity: function() {
+            return this.waitForElementVisible('@selectAddressCity', 1000).click('@selectAddressCity');
+        },
+
+        clickAddressDistrict: function() {
+            return this.waitForElementVisible('@addressDistrict', 1000).click('@addressDistrict');
+        },
+
+        selectAddressDistrict: function() {
+            return this.waitForElementVisible('@selectAddressDistrict', 1000).click('@selectAddressDistrict');
+        },
+
+        typeAddressPostCode: function(addressPostCode) {
+            return this.waitForElementVisible('@addressPostCode', 1000).setValue('@addressPostCode', addressPostCode);
+        },
+
+        clickAddressSubmitButton: function() {
+            return this.waitForElementVisible('@addNewAddressButton', 1000).click('@addNewAddressButton');
+        },
+
+
+        clickAddressDeleteButton: function() {
+            return this.waitForElementVisible('@deleteAddedAddress', 1000).click('@deleteAddedAddress');
+        },
+
+
+        clickAddressModalPageDelete: function() {
+            return this.waitForElementVisible('@modalPageOk', 1000).click('@modalPageOk');
+        },
+
+
+
+        //ProductDetailPage
+
+        clickFirstProductPLP: function() {
+            return this.waitForElementVisible('@productCardFirstProductPLP', 1000).click('@productCardFirstProductPLP');
+        },
+
+        clickAddToBag: function() {
+            return this.waitForElementVisible('@addToBagButtonPDP', 1000).click('@addToBagButtonPDP');
+        },    
+        
+        clickShoppingBag: function() {
+            return this.waitForElementVisible('@shoppingBag', 1000).click('@shoppingBag');
+        },
+
+
+
+        //Shopping Bag Functionality
+
+        clickApproveShoppingBag: function() {
+            return this.waitForElementVisible('@submitShoppingBag', 1000).click('@submitShoppingBag');
+        },
+
+
+        clickCheckoutButton: function() {
+            return this.waitForElementVisible('@checkoutButton', 1000).click('@checkoutButton');
+        },
+
+
+
+        //Checkout Page Functionality
+
+        clickShippingAddress: function() {
+            return this.waitForElementVisible('@shippingAddressDropDownListBox', 1000).click('@shippingAddressDropDownListBox');
+        },
+
+
+        typeCreditCardName: function(creditCardName) {
+            return this.waitForElementVisible('@creditCardName', 1000).setValue('@creditCardName', creditCardName);
+        },
+
+
+        typeCreditCardNo: function(creditCardNo) {
+            return this.waitForElementVisible('@creditCardNo', 1000).setValue('@creditCardNo', creditCardNo);
+        },
+
+
+        clickCreditCardExpirationMonth: function() {
+            return this.waitForElementVisible('@creditCardExpirationMonth', 1000).click('@creditCardExpirationMonth');
+        },
+
+
+        selectCreditCardExpirationJanuary: function() {
+            return this.waitForElementVisible('@creditCardExpirationJanuary', 1000).click('@creditCardExpirationJanuary');
         },
 
         
-        //Subscribe Field
-
-        typeYourEmailAddress: function(email) {
-            return this.waitForElementVisible('@typeYourEmailAddress', 1000).setValue('@typeYourEmailAddress', email);
-        },
-
-        clickSubscribeButton: function() {
-            return this.waitForElementVisible('@subscribeButton', 10000).click('@subscribeButton');
+        clickCreditCardExpirationYear: function() {
+            return this.waitForElementVisible('@creditCardExpirationYear', 1000).click('@creditCardExpirationYear');
         },
 
 
-        //Global Footer
+        selectCreditCardExpirationSecond: function() {
+            return this.waitForElementVisible('@creditCardExpirationYearSecond', 1000).click('@creditCardExpirationYearSecond');
+        },
 
-        clickCookiesSettings: function() {
-            return this.waitForElementVisible('@cookiesSettings', 1000).click('@cookiesSettings');
+
+        typeCvv: function(cvv) {
+            return this.waitForElementVisible('@creditCardSecurityNumber', 1000).setValue('@creditCardSecurityNumber', cvv);
+        },
+
+
+        clickCheckoutSubmitButton: function() {
+            return this.waitForElementVisible('@proceedPaymentButton', 1000).click('@proceedPaymentButton');
         },
 
     }]
