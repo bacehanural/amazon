@@ -1,428 +1,246 @@
 module.exports = {
 
-    url: 'https://www.lidyana.com/',
+    url: 'https://www.amazon.com/',
     
     elements: {
 
-        //Main Page Elements
-        lidyanaLogo: '.header-logo',
-        search: '.search-box input[id = "query"]',
-        login: '.site-header-v2 > div:nth-child(4) nav .user-nav-login',
-        wishlist: '.site-header-v2 > div:nth-child(4) nav .wishlist-icon',
-        shoppingBag: '.site-header-v2 > div:nth-child(4) nav .user-nav-cart',
+        //Home Page Global Header Elements
 
-
-
-        //Cookies
-        acceptCookiesRibbon: '.cookie-warning-close',
-
-
-
-        //Login
-        typeEmail: 'nav:nth-child(2) .header-dropdown input[id = "topLogin_email"]',
-        typePassword: 'nav:nth-child(2) .header-dropdown input[id = "topLogin_password"]',
-        signInButton: 'nav:nth-child(2) .header-dropdown .btn-submit',
-
-
-
-        //My Profile Drop-Down List Box
-        contactDetails: 'div:nth-child(4) .user-nav-login .header-dropdown a:first-child',
-        logout: 'div:nth-child(4) .user-nav-login .header-dropdown a:nth-child(3)',
-
-
-
-        //Contact Information
-        emailValidation: '.account-content .validate > div:nth-child(3) > input[value="burcuacehanural@yopmail.com"]',
-        myAccountMenuBar: '.account-content h1',
-        myAccountField: '.account-sidebar p',
-
-
-
-        //Search
-        searchOptionFirstCategory: '.search-box .search-suggestions .category-suggestion li:first-child',
-
-
-
-        //Product Listing Page
-        categoryBreadcrumb: '.urlTitle',
-        categoryHeader: '.category-title-content .category-title',
+        amazonLogo: '#nav-logo-sprites',
+        deliveryCountry: '#nav-global-location-popover-link',
+        relatedDeliveryCountryName: '#glow-ingress-line2',
+        searchField: '#nav-search-bar-form',
+        languageFlagIcon: '#icp-nav-flyout',
+        acountLists: '#nav-link-accountList',
         
-
-
-        //Product Detail Page
-        productCardFirstProductPLP: 'li:first-child .product-list-link',
-        addToBagButtonPDP: '.btn-primary.eventAddToCart',
+        loggedInUserName: '#nav-link-accountList-nav-line-1',
         
+        returnOrders: '#nav-orders',
+        cartIcon: '#nav-cart',
 
-
-        //Wishlist
-        firstProductPLPWishlistIcon: 'div:nth-child(4) li:first-child .product-list-fav',
-        wishlistFirstProduct: '.products.type2 > ul:first-child > .product-list-item:first-child',
-        continueShoppingButtonWishlistPage: '.wishlist-header.empty-wishlist .btn-primary',
-        firstProductWishlistPageWishlistIcon: 'li:first-child .product-list-fav',
-
-
-        
-        //Modal Page
-        modalPageOk: '.modal-footer .btn-primary',
+        homeGlobalHeader: '#nav-belt',
 
 
 
-        //Newsletter
-        womanRadioButton: 'input[id="womanFooter"]',
-        newsletterEmail: 'input[id="footerEmail"]',
-        newsletterSubmitButton: '.input-group-btn',
-        modalPage: '.modal.scrollable',
+        //Account & Lists Elements
+
+        signInButton: '#nav-signin-tooltip .nav-action-button',
+        registerButton: '.nav-signin-tooltip-footer > .nav-a',
+        logout: '#nav-item-signout',
 
 
 
-        //Shopping Bag
-        submitShoppingBag: '.button-normal',
-        checkoutButton: '.cart-nav-buttons .btn-primary',
+        //registration Elements
+
+        amazonLogoRegisteration: '.a-link-nav-icon',
+        createAccountHeader: '#authportal-main-section > div:nth-child(2) > div .a-spacing-small',
+        registerYourName: 'input[id="ap_customer_name"]',
+
+        registerEmail: 'input[id="ap_email"]',
+
+        registerPassword: 'input[id="ap_password"]',
+
+        registerReEnterPassword: 'input[id="ap_password_check"]',
+        registerCreateYourAmazonAccountButton: '#continue',
+        registerSignIn: '.a-box.a-spacing-extra-large > div > div:nth-child(7) > .a-link-emphasis',
+        registerCreateBusinessAccount: '#ab-registration-link',
+        registerFooter: '.a-section.a-spacing-top-extra-large.auth-footer',
+
+
+        registrationForm: '#ap_register_form',
+
+        solveThisPuzzleRegistration: '#cvf-page-content',
+        registerEmailAlreadyInUseSignIn: '#authportal-main-section > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > a',
 
 
 
-        //Checkout Page
-        shippingAddressDropDownListBox: 'div:first-child > div:nth-child(2) > div:first-child > select',
+        //The First Step of Login Page Elements
+
+        loginFirstStepEmail: 'input[id="ap_email"]',
+
+        logincontinueButton: '.a-button.a-button-span12.a-button-primary',
+        loginNeedHelp: '.a-expander-prompt',
+        conditionsOfUse: '#legalTextRow > a:nth-child(1)',
+        privacyPolicy: '#legalTextRow > a:nth-child(2)',
+        loginCreateYourAmazonAccountButton: '#createAccountSubmit',
+        loginFirstStepPanel: '#authportal-main-section > div:nth-child(2)',
 
 
 
-        //My Addresses
-        addressesMenuBar: '.account-sidebar nav li:nth-child(14)',
-        newAddressButton: '.account-content .account-new-address',
-        addressTitle: '.account-content input[id="alias"]',
-        addressFirstName: '.account-content input[id="name"]',
-        addressLastName: '.account-content input[id="lastname"]',
-        addressPhoneNumber: '.account-content input[id="phone"]',
-        addressAddress: '.account-content textarea[id="address"]',
-        addressCountry: '.account-content select[id="country_code"]',
-        selectAddressCountry: '.account-content select[id="country_code"] option:nth-child(208)',
-        addressCity: '.account-content select[id="city_id"]',
-        selectAddressCity: '.account-content select[id="city_id"] option:nth-child(4)',
-        addressDistrict: '.account-content select[id="district_id"]',
-        selectAddressDistrict: '.account-content select[id="district_id"] option:nth-child(23)',
-        addressPostCode: '.account-content input[id="postal_code"]',
-        addNewAddressButton: '.address-form-buttons .btn-primary',
-        deleteAddedAddress: '.account-address-wrap > div:first-child > div > button[type="button"]',
-        
-        addressDeleteButton: '.account-address-box-buttons button[type="button"]',
-        addressUpdateButton: '.account-address-box-buttons > a',
-        newlyCreatedAddressWholeField: '.account-address-box',
-        newlyCreatedAddressDisplay: '.account-address-box .overflow',
-        recipientNameDisplay: '.account-address-box strong',
-        addressRegionDisplay: '.account-address-box p:nth-child(3)',
-        phoneNumberAddressDisplay: '.account-address-box p:nth-child(4)',
+        //The Second Step of Login Page Elements
+
+        registeredMailAddressSecondLogin: '.a-row.a-spacing-base > span',
+        forgotyourPasswordSecondLogin: '#auth-fpp-link-bottom',
+
+        secondLoginPassword: 'input[id="ap_password"]',
+
+        secondLoginSignInButton: '#signInSubmit',
+        secondStepLoginDetailsInfo: '#remember_me_learn_more_link',
 
 
 
-        //Checkout Page
+        //Invalid Email Address
 
-        creditCardName: 'input[id="cc_name"]',
-        creditCardNo: 'input[id="cc_no"]',
-        creditCardExpirationMonth: '.checkv4__select.left-col',
-        creditCardExpirationJanuary: '.checkv4__select.left-col option:nth-child(2)',
-        creditCardExpirationYear: '.checkv4__select.right-col',
-        creditCardExpirationYearSecond: '.checkv4__select.right-col option:nth-child(4)',
-        creditCardSecurityNumber: 'input[id="cc_cvc"]',
-        proceedPaymentButton: '.checkv4-buy.desktop-only .btn-primary',
+        emailAddressAlreadyInUse: '#authportal-main-section > div:nth-child(2) > div',
 
     },
 
     
-
+    
     commands: [{
 
-        //Initials
+        //Initial Elements from Amazon HomePage
 
         checkInitialElements: function() {
             return (
-              this.waitForElementVisible('@lidyanaLogo', 1000)
-                .waitForElementVisible('@search', 1000)
-                .waitForElementVisible('@login', 1000)
-                .waitForElementVisible('@wishlist', 1000)
-                .waitForElementVisible('@shoppingBag', 1000)
+              this.waitForElementVisible('@amazonLogo', 1000)
+                .waitForElementVisible('@deliveryCountry', 1000)
+                .waitForElementVisible('@relatedDeliveryCountryName', 1000)
+                .waitForElementVisible('@searchField', 1000)
+                .waitForElementVisible('@languageFlagIcon', 1000)
+                .waitForElementVisible('@acountLists', 1000)
+                .waitForElementVisible('@returnOrders', 1000)
+                .waitForElementVisible('@cartIcon', 1000)
             );
         },
 
 
 
-        //Newly Created Address Validation
+        //Initial Elements from Amazon Registration Page
 
-        myAddressFieldValidation: function() {
+        checkRegistrationElements: function() {
             return (
-              this.waitForElementVisible('@addressDeleteButton', 1000)
-                .waitForElementVisible('@addressUpdateButton', 1000)
-                .waitForElementVisible('@newlyCreatedAddressWholeField', 1000)
-                .waitForElementVisible('@newlyCreatedAddressDisplay', 1000)
-                .waitForElementVisible('@recipientNameDisplay', 1000)
-                .waitForElementVisible('@addressRegionDisplay', 1000)
-                .waitForElementVisible('@phoneNumberAddressDisplay', 1000)
+              this.waitForElementVisible('@amazonLogoRegisteration', 1000)
+                .waitForElementVisible('@createAccountHeader', 1000)
+                .waitForElementVisible('@registerYourName', 1000)
+                .waitForElementVisible('@registerEmail', 1000)
+                .waitForElementVisible('@registerPassword', 1000)
+                .waitForElementVisible('@registerReEnterPassword', 1000)
+                .waitForElementVisible('@registerCreateYourAmazonAccountButton', 1000)
+                .waitForElementVisible('@registerSignIn', 1000)
+                .waitForElementVisible('@registerCreateBusinessAccount', 1000)
+                .waitForElementVisible('@registerFooter', 1000)
             );
         },
 
 
 
-        //Newly Created Address Assertion
+        //Initial Elements of the First Step from Amazon Login Page
 
-        myAddressFieldAssertions: function() {
+        checkFirstStepLoginElements: function() {
             return (
-              this.assert.elementPresent('@addressDeleteButton')
-                .assert.elementPresent('@addressUpdateButton')
-                .assert.elementPresent('@newlyCreatedAddressWholeField')
-                .assert.elementPresent('@newlyCreatedAddressDisplay')
-                .assert.elementPresent('@recipientNameDisplay')
-                .assert.elementPresent('@addressRegionDisplay')
-                .assert.elementPresent('@phoneNumberAddressDisplay')
+              this.waitForElementVisible('@loginFirstStepEmail', 1000)
+                .waitForElementVisible('@logincontinueButton', 1000)
+                .waitForElementVisible('@loginNeedHelp', 1000)
+                .waitForElementVisible('@conditionsOfUse', 1000)
+                .waitForElementVisible('@privacyPolicy', 1000)
+                .waitForElementVisible('@loginCreateYourAmazonAccountButton', 1000)
+                .waitForElementVisible('@registerFooter', 1000)
             );
         },
 
 
-        //Main Functions
-        
-        acceptCookies: function() {
-            return this.waitForElementVisible('@acceptCookiesRibbon', 4000).click('@acceptCookiesRibbon');
+
+        //Initial Elements of the Second Step from Amazon Login Page
+
+        checkSecondStepLoginElements: function() {
+            return (
+              this.waitForElementVisible('@registeredMailAddressSecondLogin', 1000)
+                .waitForElementVisible('@forgotyourPasswordSecondLogin', 1000)
+                .waitForElementVisible('@secondLoginPassword', 1000)
+                .waitForElementVisible('@secondLoginSignInButton', 1000)
+                .waitForElementVisible('@secondStepLoginDetailsInfo', 1000)
+                .waitForElementVisible('@registerFooter', 1000)
+            );
         },
 
-        clickLogin: function() {
-            return this.waitForElementVisible('@login', 1000).click('@login');
+
+
+        //Initial Elements from the Account & Lists
+
+        checkAccountandListsDropDownListBoxElements: function() {
+            return (
+              this.waitForElementVisible('@acountLists', 1000)
+                .waitForElementVisible('@homeGlobalHeader', 1000)
+            );
         },
 
-        typeEmail: function(email) {
-            return this.waitForElementVisible('@typeEmail', 1000).setValue('@typeEmail', email);
+
+
+        //Registration Functions
+
+        clickRegister: function() {
+            return this.waitForElementVisible('@registerButton', 1000).click('@registerButton');
         },
 
-        typePassword: function(password) {
-            return this.waitForElementVisible('@typePassword', 1000).setValue('@typePassword', password);
+        clickRegisterAmazonLogo: function() {
+            return this.waitForElementVisible('@amazonLogoRegisteration', 1000).click('@amazonLogoRegisteration');
         },
+
+        registerYourName: function(regYourName) {
+            return this.waitForElementVisible('@registerYourName', 1000).setValue('@registerYourName', regYourName);
+        },
+
+        registerEmail: function(regEmail) {
+            return this.waitForElementVisible('@registerEmail', 1000).setValue('@registerEmail', regEmail);
+        },
+
+        registerPassword: function(regPassword) {
+            return this.waitForElementVisible('@registerPassword', 1000).setValue('@registerPassword', regPassword);
+        },
+
+        registerReEnterPassword: function(reEnterPassword) {
+            return this.waitForElementVisible('@registerReEnterPassword', 1000).setValue('@registerReEnterPassword', reEnterPassword);
+        },
+
+        clickRegisterationButton: function() {
+            return this.waitForElementVisible('@registerCreateYourAmazonAccountButton', 1000).click('@registerCreateYourAmazonAccountButton');
+        },
+
+        clickRegisterEmailAlreadyInUseSignIn: function() {
+            return this.waitForElementVisible('@registerEmailAlreadyInUseSignIn', 1000).click('@registerEmailAlreadyInUseSignIn');
+        },
+
+
+
+        //The First Step of Login Functions
 
         clickSignInButton: function() {
             return this.waitForElementVisible('@signInButton', 1000).click('@signInButton');
         },
 
+        loginFirstStepEmail: function(loginFirstStepEmail) {
+            return this.waitForElementVisible('@loginFirstStepEmail', 1000).setValue('@loginFirstStepEmail', loginFirstStepEmail);
+        },
 
+        clickLoginContinueButton: function() {
+            return this.waitForElementVisible('@logincontinueButton', 1000).click('@logincontinueButton');
+        },
 
-        //Profile Functions
-
-        clickAccountInformation: function() {
-            return this.waitForElementVisible('@contactDetails', 1000).click('@contactDetails');
+        clickLoginCreateAmazonAccountButton: function() {
+            return this.waitForElementVisible('@loginCreateYourAmazonAccountButton', 1000).click('@loginCreateYourAmazonAccountButton');
         },
 
 
 
-        //Logout Function
+        //The Second Step of Login Functions
 
-        clickLogout: function() {
+        secondLoginPassword: function(secondLoginPassword) {
+            return this.waitForElementVisible('@secondLoginPassword', 1000).setValue('@secondLoginPassword', secondLoginPassword);
+        },
+
+        clickSecondLoginSignInButton: function() {
+            return this.waitForElementVisible('@secondLoginSignInButton', 1000).click('@secondLoginSignInButton');
+        },
+
+
+
+        //Logout Functions
+        
+        clickLogoutButton: function() {
             return this.waitForElementVisible('@logout', 1000).click('@logout');
         },
 
-
-
-        //Search Functions
-
-        clickSearch: function() {
-            return this.waitForElementVisible('@search', 1000).click('@search');
-        },
-
-        searchMainPage: function(mainQuery) {
-            return this.waitForElementVisible('@search', 1000).setValue('@search', mainQuery);
-        },
-
-        clickSearchOptionFirstCategory: function() {
-            return this.waitForElementVisible('@searchOptionFirstCategory', 1000).click('@searchOptionFirstCategory');
-        },
-
-
-
-        //Wishlist Functions
-
-        clickFirstProductPLPWishlistIcon: function() {
-            return this.waitForElementVisible('@firstProductPLPWishlistIcon', 2000).click('@firstProductPLPWishlistIcon');
-        },
-
-
-        clickFirstProductWishlistPageWishlistIcon: function() {
-            return this.waitForElementVisible('@firstProductWishlistPageWishlistIcon', 2000).click('@firstProductWishlistPageWishlistIcon');
-        },
-
-
-        clickWishlistIcon: function() {
-            return this.waitForElementVisible('@wishlist', 3000).click('@wishlist');
-        },
-        
-
-
-        //Modal Page Functions
-
-        clickModalPageOk: function() {
-            return this.waitForElementVisible('@modalPageOk', 1000).click('@modalPageOk');
-        },
-
-
-
-        //Newsletter Functions
-
-        clickWomanRadioButton: function() {
-            return this.waitForElementVisible('@womanRadioButton', 1000).click('@womanRadioButton');
-        },
-
-        typeNewsletterEmail: function(newsletterEmail) {
-            return this.waitForElementVisible('@newsletterEmail', 1000).setValue('@newsletterEmail', newsletterEmail);
-        },
-
-        clickNewsletterSubmit: function() {
-            return this.waitForElementVisible('@newsletterSubmitButton', 1000).click('@newsletterSubmitButton');
-        },
-
-
-
-        //My Addresses Functions
-        
-        clickAddressMenuBar: function() {
-            return this.waitForElementVisible('@addressesMenuBar', 1000).click('@addressesMenuBar');
-        },
-
-        clickNewAddress: function() {
-            return this.waitForElementVisible('@newAddressButton', 1000).click('@newAddressButton');
-        },
-
-        typeAddressTitle: function(addressTitle) {
-            return this.waitForElementVisible('@addressTitle', 1000).setValue('@addressTitle', addressTitle);
-        },      
-
-        typeAddressFirstName: function(addressFirstName) {
-            return this.waitForElementVisible('@addressFirstName', 1000).setValue('@addressFirstName', addressFirstName);
-        },
-
-        typeAddressLastName: function(addressLastName) {
-            return this.waitForElementVisible('@addressLastName', 1000).setValue('@addressLastName', addressLastName);
-        },
-
-        typeAddressPhoneNumber: function(addressPhoneNumber) {
-            return this.waitForElementVisible('@addressPhoneNumber', 1000).setValue('@addressPhoneNumber', addressPhoneNumber);
-        },
-
-        typeAddressAddress: function(addressAddress) {
-            return this.waitForElementVisible('@addressAddress', 1000).setValue('@addressAddress', addressAddress);
-        },
-
-        clickAddressCountry: function() {
-            return this.waitForElementVisible('@addressCountry', 1000).click('@addressCountry');
-        },
-
-        selectAddressCountry: function() {
-            return this.waitForElementVisible('@selectAddressCountry', 1000).click('@selectAddressCountry');
-        },
-
-        clickAddressCity: function() {
-            return this.waitForElementVisible('@addressCity', 1000).click('@addressCity');
-        },
-
-        selectAddressCity: function() {
-            return this.waitForElementVisible('@selectAddressCity', 1000).click('@selectAddressCity');
-        },
-
-        clickAddressDistrict: function() {
-            return this.waitForElementVisible('@addressDistrict', 1000).click('@addressDistrict');
-        },
-
-        selectAddressDistrict: function() {
-            return this.waitForElementVisible('@selectAddressDistrict', 1000).click('@selectAddressDistrict');
-        },
-
-        typeAddressPostCode: function(addressPostCode) {
-            return this.waitForElementVisible('@addressPostCode', 1000).setValue('@addressPostCode', addressPostCode);
-        },
-
-        clickAddressSubmitButton: function() {
-            return this.waitForElementVisible('@addNewAddressButton', 1000).click('@addNewAddressButton');
-        },
-
-
-        clickAddressDeleteButton: function() {
-            return this.waitForElementVisible('@deleteAddedAddress', 1000).click('@deleteAddedAddress');
-        },
-
-
-        clickAddressModalPageDelete: function() {
-            return this.waitForElementVisible('@modalPageOk', 1000).click('@modalPageOk');
-        },
-
-
-
-        //ProductDetailPage
-
-        clickFirstProductPLP: function() {
-            return this.waitForElementVisible('@productCardFirstProductPLP', 1000).click('@productCardFirstProductPLP');
-        },
-
-        clickAddToBag: function() {
-            return this.waitForElementVisible('@addToBagButtonPDP', 1000).click('@addToBagButtonPDP');
-        },    
-        
-        clickShoppingBag: function() {
-            return this.waitForElementVisible('@shoppingBag', 1000).click('@shoppingBag');
-        },
-
-
-
-        //Shopping Bag Functionality
-
-        clickApproveShoppingBag: function() {
-            return this.waitForElementVisible('@submitShoppingBag', 1000).click('@submitShoppingBag');
-        },
-
-
-        clickCheckoutButton: function() {
-            return this.waitForElementVisible('@checkoutButton', 1000).click('@checkoutButton');
-        },
-
-
-
-        //Checkout Page Functionality
-
-        clickShippingAddress: function() {
-            return this.waitForElementVisible('@shippingAddressDropDownListBox', 1000).click('@shippingAddressDropDownListBox');
-        },
-
-
-        typeCreditCardName: function(creditCardName) {
-            return this.waitForElementVisible('@creditCardName', 1000).setValue('@creditCardName', creditCardName);
-        },
-
-
-        typeCreditCardNo: function(creditCardNo) {
-            return this.waitForElementVisible('@creditCardNo', 1000).setValue('@creditCardNo', creditCardNo);
-        },
-
-
-        clickCreditCardExpirationMonth: function() {
-            return this.waitForElementVisible('@creditCardExpirationMonth', 1000).click('@creditCardExpirationMonth');
-        },
-
-
-        selectCreditCardExpirationJanuary: function() {
-            return this.waitForElementVisible('@creditCardExpirationJanuary', 1000).click('@creditCardExpirationJanuary');
-        },
-
-        
-        clickCreditCardExpirationYear: function() {
-            return this.waitForElementVisible('@creditCardExpirationYear', 1000).click('@creditCardExpirationYear');
-        },
-
-
-        selectCreditCardExpirationSecond: function() {
-            return this.waitForElementVisible('@creditCardExpirationYearSecond', 1000).click('@creditCardExpirationYearSecond');
-        },
-
-
-        typeCvv: function(cvv) {
-            return this.waitForElementVisible('@creditCardSecurityNumber', 1000).setValue('@creditCardSecurityNumber', cvv);
-        },
-
-
-        clickCheckoutSubmitButton: function() {
-            return this.waitForElementVisible('@proceedPaymentButton', 1000).click('@proceedPaymentButton');
-        },
 
     }]
 };
