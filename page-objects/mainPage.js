@@ -170,7 +170,7 @@ module.exports = {
         //Registration Functions
 
         clickRegister: function() {
-            return this.waitForElementVisible('@registerButton', 1000).click('@registerButton');
+            return this.waitForElementVisible('@registerButton', 3000).click('@registerButton');
         },
 
         clickRegisterAmazonLogo: function() {
