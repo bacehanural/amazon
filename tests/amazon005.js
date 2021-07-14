@@ -4,7 +4,7 @@ module.exports = {
       'TC_Amazon_MainPage'(client) {
 
          const loginFirstStepEmail = 'ural0nur@yandex.com.tr';
-         const secondLoginPassword = 'Burcu-_-1989';
+         const secondLoginPassword = 'Burcu!-!1989';
          
          const page = client.page.mainPage();
      

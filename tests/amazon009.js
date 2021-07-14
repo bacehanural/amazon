@@ -8,7 +8,7 @@ module.exports = {
       const regPassword = '$7~9k.yir*@*4LT';
       const reEnterPassword = '$7~9k.yir*@*4LT'; 
       const loginFirstStepEmail = 'ural0nur@yandex.com.tr';
-      const secondLoginPassword = 'Burcu-_-1989';
+      const secondLoginPassword = 'Burcu!-!1989';
        
        const page = client.page.mainPage();
    

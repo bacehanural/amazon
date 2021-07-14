@@ -3,7 +3,7 @@ module.exports = {
     'amazon005'(client) {
 
         const loginFirstStepEmail = 'ural0nur@yandex.com.tr';
-        const secondLoginPassword = 'Burcu-_-1989';
+        const secondLoginPassword = 'Burcu!-!1989';
 
         const loginFirstStepPanel = '#authportal-main-section > div:nth-child(2)';
         const page = client.page.mainPage();
